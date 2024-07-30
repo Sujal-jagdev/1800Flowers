@@ -7,7 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12" style={{ position: 'fixed' }}>
+    <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12" style={{ backgroundColor: '#fff' }}>
       <nav>
         <div className="Nav-1 d-flex col-12 align-items-center justify-content-between ps-lg-5 pe-lg-5 ">
           <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft"><RiMenuSearchLine className='fs-3' /></button>
@@ -50,18 +50,18 @@ const Navbar = () => {
             <button className='btn text-light' style={{ backgroundColor: '#522C73', height: '45px' }}>SEARCH</button>
           </div>
           <div className="Links mt-3">
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Summer <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Birthday <IoIosArrowForward /> </h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Sympathy <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Occasions <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Flowers <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Plants <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Gift Baskets & Food <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Gifts & More <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Same-Day Delivery <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Sale <IoIosArrowForward /></h5>
-              <h5 className='d-flex justify-content-between ms-3 me-3' style={{height: '40px'}}>Community <IoIosArrowForward /></h5>
-            </div>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Summer <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Birthday <IoIosArrowForward /> </h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Sympathy <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Occasions <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Flowers <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Plants <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Gift Baskets & Food <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Gifts & More <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Same-Day Delivery <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Sale <IoIosArrowForward /></h5>
+            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Community <IoIosArrowForward /></h5>
+          </div>
         </div>
       </div>
     </div>
