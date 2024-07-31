@@ -1,32 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import logo2 from '../assets/logo2.png'
+import { flowersData } from '../Context.jsx'
 
-let folob = [
-    {
-        images1: 'https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blte7faae9c9660c2c5/66a28e355c5264b275270110/flowers-same-day-delivery-silo-191119-440x440.jpg?auto=webp',
-        title: "Same-Day Flower Delivery"
-    },
-    {
-        images1: 'https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt5b35196be36fb0f8/66992964e5f7c8606fb02545/sympathy-flowers-silo-191165-exclusiveheading-440x440.jpg?auto=webp',
-        title: "Sympathy"
-    },
-    {
-        images1: 'https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt17030b28dd25ff08/6699296d7f59ae008999bfb5/chocolate-covered-strawberries-delivery-silo-192949-440x440.jpg?auto=webp',
-        title: "Chocolate Covered Strawberries"
-    },
-    {
-        images1: 'https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt92a0ad0684119599/66a167ff9cd6fda3abf2454a/preserved-roses-silo-156623-440x440.jpg?auto=webp',
-        title: "Love & Romance"
-    },
-    {
-        images1: 'https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blte866eb65055bcb80/66992a2277a780359444b7c7/plants-silo-101980-exclusiveheading-440x400.jpg?auto=webp',
-        title: "Plants"
-    },
-    {
-        images1: 'https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt711f7ab6f3fdb950/66a7d52197164414309d0648/bouquet-of-the-month-july-red-roses-silo-194201-440x440.jpg?auto=webp',
-        title: "Bouquet of the Month"
-    },
-]
 const Home = () => {
+    const { data1, setdata1, data2, setData2 } = useContext(flowersData)
     return (
         <>
             <div className='HomePage'>
@@ -35,15 +12,44 @@ const Home = () => {
                     <div className=' col-12' style={{ height: '350px', marginTop: '-0.6%' }}>                <img className='col-12' style={{ height: '100%', objectFit: 'cover' }} src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt4324f2c5cb150cf4/668ed38642bfac6ad686cd0a/send-birthday-flowers-hero-fy25-summer-newcta.jpg?auto=webp" alt="" />
                     </div>
                 </header>
-                <section>
+                <section className=' container-lg'>
                     <h2 className='col-12 text-center mt-5'>Send Flowers & Exclusive Gifts</h2>
-                    <div className="col-12 d-flex" style={{flexWrap: 'wrap'}}>
+                    <div className="col-12 d-flex" style={{ flexWrap: 'wrap' }}>
                         {
-                            folob.map((e) => (
+                            data1.map((e) => (
                                 <>
-                                    <div className='col-2 p-3'>
-                                        <img src={e.images1} alt="" className='col-12' />
-                                        <p>{e.title}</p>
+                                    <div className='col-lg-2 p-1 col-md-4 col-sm-6 col-4'>
+                                        <img src={e.image } alt="" className='col-12' />
+                                        <p>{e.title }</p>
+                                    </div>
+                                </>
+                            ))
+                        }
+                    </div>
+                </section>
+
+                <div className='col-12 container-lg mt-4 overflow-hidden d-lg-block d-md-block d-sm-block d-none' style={{ position: 'relative' }}>
+                    <div className='col-12' >
+                        <img className='col-12' src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/bltc4d490e96bce8487/66a7d6fb7cd4c92b2c394c24/love-shack-fancy-zone-10-banner-fy25-summer.jpg?auto=webp" alt="" />
+                    </div>
+                    <div className='col-12 d-flex align-items-center justify-content-center flex-column ' style={{ position: 'absolute', top: '30%' }}>
+                        <div className='col-lg-3 col-md-3 col-sm-3 col-5'>
+                            <img className='col-12' src={logo2} alt="" />
+                        </div>
+                        <p className='col-lg-3 text-center mt-2 col-md-6 col-sm-12 col-12'>We’re sorry to interrupt this daydream, but these limited-edition (and oh-so-dreamy) pieces won’t be here for long.</p>
+                        <button className=' btn bg-light text-dark fw-bold'>Shop The Collection</button>
+                    </div>
+                </div>
+
+                <section className=' container-lg'>
+                    <h2 className='col-12 text-center mt-5'>Send Flowers & Exclusive Gifts</h2>
+                    <div className="col-12 d-flex" style={{ flexWrap: 'wrap' }}>
+                        {
+                            data2.map((e) => (
+                                <>
+                                    <div className='col-lg-2 p-1 col-md-4 col-sm-6 col-4'>
+                                        <img src={e.image } alt="" className='col-12' />
+                                        <p>{e.title }</p>
                                     </div>
                                 </>
                             ))

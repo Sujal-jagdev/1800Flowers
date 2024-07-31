@@ -7,7 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12" style={{ backgroundColor: '#fff' }}>
+    <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12 " style={{ backgroundColor: '#fff' }}>
       <nav>
         <div className="Nav-1 d-flex col-12 align-items-center justify-content-between ps-lg-5 pe-lg-5 ">
           <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft"><RiMenuSearchLine className='fs-3' /></button>
@@ -23,16 +23,14 @@ const Navbar = () => {
           </div>
         </div>
         <hr />
-        <div className="Nav-2 d-lg-flex align-items-center justify-content-between col-12 d-md-none d-sm-none d-none ">
+        <div className="Nav-2 d-lg-flex align-items-center justify-content-between col-12 d-md-none d-sm-none d-none container-lg">
           <h6>Summer </h6>
           <h6>Birthday</h6>
           <h6>Sympathy</h6>
-          <h6>Occasions</h6>
           <h6>Flowers</h6>
           <h6>Plants</h6>
           <h6>Gift Baskets & Food</h6>
           <h6>Gifts & More</h6>
-          <h6>Same-Day Delivery</h6>
           <h6>Sale</h6>
           <h6>Community</h6>
         </div>
