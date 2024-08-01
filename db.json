@@ -25,7 +25,6 @@
       "title": "Bouquet of the Month"
     }
   ],
-
   "FlowersList2": [
     {
       "image": "https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt5da19309d22f89d6/66a2b7bd4a36019d587c1059/gift-baskets-silo-gfgb-175230-gfgbheader-440x440.jpg?auto=webp",
@@ -52,8 +51,7 @@
       "title": "Baked Goods"
     }
   ],
-
-  "FlowersList3" : [  
+  "FlowersList3": [
     {
       "image": "https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt1c5c681cbc35dd46/66a2a94e34fa9a584e3be835/gift-sets-silo-MK034968-exploreheading-440x440.jpg?auto=webp",
       "title": "Gift Sets"
@@ -79,8 +77,7 @@
       "title": "Gardening Gifts"
     }
   ],
-
-  "FlowersList4" : [
+  "FlowersList4": [
     {
       "image": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/191167xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
       "title": "Floral Embrace™"
@@ -117,5 +114,400 @@
       "image": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/100551mv24b1bl19ck16x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
       "title": "Coastal Breeze™"
     }
+  ],
+  "Summer": [
+    {
+      "id": 1,
+      "title": "Fields of Europe Summer",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191119xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 54.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 2,
+      "title": "Summer Dunes",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/191357xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 64.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 3,
+      "title": "Coastal Breeze",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/191300lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 59.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 4,
+      "title": "Summer Breeze",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/194867mvw1td1x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 5,
+      "title": "Vibrant Summer Lily Bouquet",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/92926mvw1td1x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 74.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 6,
+      "title": "Summer Delight",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/194015lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 59.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 7,
+      "title": "Fiona Flamingo Mini Palm Plant",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158111sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 39.99,
+      "category": "Plants"
+    },
+    {
+      "id": 8,
+      "title": "Seaside Mermaid Dog",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191490x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 44.99,
+      "category": "Plush Toy"
+    },
+    {
+      "id": 9,
+      "title": "Sorbet Roses",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/100550mprsv1cn3x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 54.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 10,
+      "title": "By The Seaside Wreath-22”",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/182542sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Home and Kitchenware"
+    },
+    {
+      "id": 11,
+      "title": "Charming Rose Garden",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/101827lnscx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 69.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 12,
+      "title": "Garden Pathway",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/191307lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 59.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 13,
+      "title": "Summer Cake Popsicles",
+      "imageUrl": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/173061L_22x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 29.99,
+      "category": "Baked Goods"
+    },
+    {
+      "id": 14,
+      "title": "Splendid Beauty Bouquet",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/191387lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 69.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 15,
+      "title": "Radiant Sunshine Bouquet",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/194870stjv3td1x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 74.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 16,
+      "title": "Citronella Sea Salt Votive Set",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/190402sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 34.99,
+      "category": "Candles"
+    },
+    {
+      "id": 17,
+      "title": "Simply Chocolate Celebrate Summer Gift Basket",
+      "imageUrl": "https://cdn1.simplychocolate.com/wcsstore/SimplyChocolate/images/catalog/163532dx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Chocolate"
+    },
+    {
+      "id": 18,
+      "title": "Vibrant Floral Medley",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191313xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 64.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 19,
+      "title": "Magnificent Roses Preserved Citrus Roses",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/177703lcsx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 79.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 20,
+      "title": "Seashell Succulent Garden",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/158110lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 44.99,
+      "category": "Plants"
+    },
+    {
+      "id": 21,
+      "title": "Summer Artisan Iced Cookies",
+      "imageUrl": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/171491L21x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 29.99,
+      "category": "Baked Goods"
+    },
+    {
+      "id": 22,
+      "title": "Under the Sea Strawberries",
+      "imageUrl": "https://cdn4.fruitbouquets.com/wcsstore/Flowers/images/catalog/192783mx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 39.99,
+      "category": "Fruit"
+    },
+    {
+      "id": 23,
+      "title": "Lifeguard Beach Birdhouse",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/196066sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 24.99,
+      "category": "Home and Kitchenware"
+    },
+    {
+      "id": 24,
+      "title": "Hello Sunshine Mum",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158403sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 54.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 25,
+      "title": "Summer Lilies with Ross-Simons Bee Necklace",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/183407mvcw1n7x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 84.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 26,
+      "title": "Birdhouse of Blooms",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158478sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Home and Kitchenware"
+    },
+    {
+      "id": 27,
+      "title": "BluOcean Chrysanthemum Bouquet",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/191573sjwv1x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 69.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 28,
+      "title": "Classic Stripe Personalized Beach Towel",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/PersonalizationMall/images/catalog/18571-42668-180206131632x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 34.99,
+      "category": "Apparel"
+    },
+    {
+      "id": 29,
+      "title": "Sea, Sand, Beach Gift Set",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/182787bdx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 54.99,
+      "category": "Sweets"
+    },
+    {
+      "id": 30,
+      "title": "Classic BBQ Gift Tub",
+      "imageUrl": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/41377_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 74.99,
+      "category": "Baked Goods"
+    },
+    {
+      "id": 31,
+      "title": "Seaside Mermaid Cat",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191489x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 44.99,
+      "category": "Plush Toy"
+    },
+    {
+      "id": 32,
+      "title": "Engraved Brumate Mermaid Party Slim Can Cooler",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/ThingsRemembered/images/catalog/44007-116676-230629123206x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 24.99,
+      "category": "Apparel"
+    },
+    {
+      "id": 33,
+      "title": "Seashell Wreath",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/mk019734x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 39.99,
+      "category": "Home and Kitchenware"
+    },
+    {
+      "id": 34,
+      "title": "Summer Fun Fresh Fruit & Snacks Gift Box",
+      "imageUrl": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/94702_22x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Fresh Fruit"
+    },
+    {
+      "id": 35,
+      "title": "Blissful Blooming Hydrangea",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/158421lpkx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 64.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 36,
+      "title": "All About Me Embroidered Beach Bag",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/PersonalizationMall/images/catalog/18420-90966-211015125750x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 34.99,
+      "category": "Apparel"
+    },
+    {
+      "id": 37,
+      "title": "Summer Gnome Rose Plant",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/158477sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 54.99,
+      "category": "Plants"
+    },
+    {
+      "id": 38,
+      "title": "Summer Sunshine Bouquet",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/194115mtv4cn3x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 64.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 39,
+      "title": "Sunny Garden Basket",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191380lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 69.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 40,
+      "title": "Summer Sundae Cake Pops",
+      "imageUrl": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/41126L21x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 34.99,
+      "category": "Baked Goods"
+    },
+    {
+      "id": 41,
+      "title": "Kitras Ocean Breeze Gift Set",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/196233sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Sweets"
+    },
+    {
+      "id": 42,
+      "title": "Sunflowers With Ross-Simons Bee Necklace",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/160587mvcw1n7x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 84.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 43,
+      "title": "Rustic Celosia",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/158329mx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 44,
+      "title": "Citrus Sunshine Bouquet",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191381lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 59.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 45,
+      "title": "Blossom Box Gift With Butterfly Surprise and Cake",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/mk033120x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 74.99,
+      "category": "Baked Goods"
+    },
+    {
+      "id": 46,
+      "title": "Deliciously Decadent Assorted Roses & Drizzled Strawberries",
+      "imageUrl": "https://cdn4.fruitbouquets.com/wcsstore/Flowers/images/catalog/192816mbv24bdmx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 89.99,
+      "category": "Chocolate Dipped Strawberry"
+    },
+    {
+      "id": 47,
+      "title": "Hampton Collection Personalized Party Tub",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/PersonalizationMall/images/catalog/3305-108794-230120101627x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 44.99,
+      "category": "Apparel"
+    },
+    {
+      "id": 48,
+      "title": "Summer Gourmet Pretzels",
+      "imageUrl": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/17306022x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 39.99,
+      "category": "Baked Goods"
+    },
+    {
+      "id": 49,
+      "title": "Pretty Pink Azalea",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/158397lwx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 49.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 50,
+      "title": "Floral Embrace",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/191167xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 54.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 51,
+      "title": "Sea Sparkle Mermaid",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/177709alt_view1x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 29.99,
+      "category": "Plush Toy"
+    },
+    {
+      "id": 52,
+      "title": "Flip Flops ’n Beach Balls Oreo Cookies",
+      "imageUrl": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/162468L_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 29.99,
+      "category": "Baked Goods"
+    },
+    {
+      "id": 53,
+      "title": "Birthday Wishes Flower Cake Coastal",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/166259lbx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 74.99,
+      "category": "Cake"
+    },
+    {
+      "id": 54,
+      "title": "Garden Hydrangea",
+      "imageUrl": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/101983lncx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 59.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 55,
+      "title": "Radiant Ranunculus Bouquet",
+      "imageUrl": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/194003mjwv1x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 69.99,
+      "category": "Flowers"
+    },
+    {
+      "id": 56,
+      "title": "Happy Daisy",
+      "imageUrl": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/18648lnpqx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "price": 34.99,
+      "category": "Flowers"
+    }
   ]
+  
 }

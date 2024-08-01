@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
 
           <div className="Links mt-3">
-            <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Summer <IoIosArrowForward /></h5>
+            <Link to={'/summer'}><h5 className='d-flex justify-content-between ms-3 me-3 text-decoration-none text-dark' style={{ height: '40px' }}>Summer<IoIosArrowForward /></h5></Link>
             <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Birthday <IoIosArrowForward /> </h5>
             <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Sympathy <IoIosArrowForward /></h5>
             <h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Occasions <IoIosArrowForward /></h5>

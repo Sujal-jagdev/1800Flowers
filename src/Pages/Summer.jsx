@@ -1,7 +1,38 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Sidebar from '../Components/Sidebar'
+import axios from 'axios';
+import { flowersData } from '../Context';
 
 const Summer = () => {
+
+    const { summerData, setSummerData, Summer, category, setCategory ,pricess, setpricess} = useContext(flowersData)
+    let my = 0
+    const getData = () => {
+        axios.get(Summer, {
+            params: {
+                category: category
+            }
+        }).then((res) => {
+            setSummerData(res.data);
+            
+        }).catch((err) => console.log(err))
+    }
+const [myPrice, setmyPrice] = useState(0)
+   
+useEffect(() => {
+       getData()
+       summerData.map((e)=>{
+            setpricess(e.price)
+            console.log(pricess)
+        
+    })
+  
+    }, [my, Summer, category,pricess])
+
+    if (summerData.length > 0) {
+        my = summerData[summerData.length - 1];
+    }
+
     return (
         <>
             <div className=' container-lg col-12 mt-4'>
@@ -12,9 +43,38 @@ const Summer = () => {
                 </div>
 
                 <div className='d-flex'>
-                    <Sidebar/>
-                    <div className='col-9'>
-                        
+                    <Sidebar />
+                    <div className='col-lg-9 col-12'>
+
+                        <header className='col-12 d-lg-flex d-md-flex d-sm-flex justify-content-between align-items-center '>
+                            <h5 className=' text-center'>{my.id} Results</h5>
+                            <div className='d-flex align-items-center justify-content-between col-lg-4 col-md-7 col-sm-8'>
+                                <select name="" id="" className='p-1 col-lg-10 col-md-7 col-sm-7 col-7'>
+                                    <option value="">Sort By</option>
+                                    <option value="">High To Low</option>
+                                    <option value="">Low To High</option>
+                                </select>
+                                <button className='d-lg-none d-block btn border border-3 col-md-3 col-sm-3 col-4'>Filters</button>
+                            </div>
+                        </header>
+
+                        <div className="main col-12 d-flex flex-wrap">
+                            {
+                             pricess <= 75 ? summerData.map((e) => (
+                                    <div className='col-lg-4 p-2 col-md-4 col-sm-6 col-6'>
+                                        <img src={e.imageUrl} alt="" className=' col-12' />
+                                        <h5>{e.title}</h5>
+                                        <p>{e.price}</p>
+                                    </div>
+                                )) : summerData.map((e) => (
+                                    <div className='col-lg-4 p-2 col-md-4 col-sm-6 col-6'>
+                                        <img src={e.imageUrl} alt="" className=' col-12' />
+                                        <h5>{e.title}</h5>
+                                        <p>{e.price}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
