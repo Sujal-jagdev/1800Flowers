@@ -5,7 +5,7 @@ import { flowersData } from '../Context';
 
 const Summer = () => {
 
-    const { summerData, setSummerData, Summer, category, setCategory ,pricess, setpricess} = useContext(flowersData)
+    const { summerData, setSummerData, Summer, category, setCategory, pricess, setpricess } = useContext(flowersData)
     let my = 0
     const getData = () => {
         axios.get(Summer, {
@@ -14,20 +14,12 @@ const Summer = () => {
             }
         }).then((res) => {
             setSummerData(res.data);
-            
+
         }).catch((err) => console.log(err))
     }
-const [myPrice, setmyPrice] = useState(0)
-   
-useEffect(() => {
-       getData()
-       summerData.map((e)=>{
-            setpricess(e.price)
-            console.log(pricess)
-        
-    })
-  
-    }, [my, Summer, category,pricess])
+    useEffect(() => {
+        getData()
+    }, [my, Summer, category, pricess,])
 
     if (summerData.length > 0) {
         my = summerData[summerData.length - 1];
@@ -43,7 +35,9 @@ useEffect(() => {
                 </div>
 
                 <div className='d-flex'>
-                    <Sidebar />
+                    <div className='col-3 d-lg-block d-md-none d-sm-none d-none p-2'>
+                        <Sidebar />
+                    </div>
                     <div className='col-lg-9 col-12'>
 
                         <header className='col-12 d-lg-flex d-md-flex d-sm-flex justify-content-between align-items-center '>
@@ -54,28 +48,33 @@ useEffect(() => {
                                     <option value="">High To Low</option>
                                     <option value="">Low To High</option>
                                 </select>
-                                <button className='d-lg-none d-block btn border border-3 col-md-3 col-sm-3 col-4'>Filters</button>
+                                <button className='d-lg-none d-block btn border border-3 col-md-3 col-sm-3 col-4' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
                             </div>
                         </header>
 
                         <div className="main col-12 d-flex flex-wrap">
                             {
-                             pricess <= 75 ? summerData.map((e) => (
+                                summerData.filter(e => pricess ? e.price < 75 : true).map((e) => (
                                     <div className='col-lg-4 p-2 col-md-4 col-sm-6 col-6'>
                                         <img src={e.imageUrl} alt="" className=' col-12' />
                                         <h5>{e.title}</h5>
-                                        <p>{e.price}</p>
-                                    </div>
-                                )) : summerData.map((e) => (
-                                    <div className='col-lg-4 p-2 col-md-4 col-sm-6 col-6'>
-                                        <img src={e.imageUrl} alt="" className=' col-12' />
-                                        <h5>{e.title}</h5>
-                                        <p>{e.price}</p>
+                                        <p>${e.price}</p>
                                     </div>
                                 ))
                             }
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h2 id="offcanvasRightLabel">Filters</h2>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body " style={{ marginTop: '-7%' }}>
+                    <Sidebar />
                 </div>
             </div>
         </>

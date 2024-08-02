@@ -6,10 +6,10 @@ export const FlowersProvider = ({ children }) => {
     const [summerData, setSummerData] = useState([])
     const [category, setCategory] = useState(null)
     const [Summer, setSummer] = useState(`http://localhost:8000/Summer`)
-    const [pricess, setpricess] = useState()
+    const [pricess, setpricess] = useState(false)
 
     return (
-        <flowersData.Provider value={{ summerData, setSummerData, Summer, setSummer, category, setCategory ,pricess, setpricess}}>
+        <flowersData.Provider value={{ summerData, setSummerData, Summer, setSummer, category, setCategory, pricess, setpricess }}>
             {children}
         </flowersData.Provider>
     );

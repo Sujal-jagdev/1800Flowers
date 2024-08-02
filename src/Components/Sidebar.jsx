@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { flowersData } from '../Context';
 
 const Sidebar = () => {
-    const { Summer, setSummer, setCategory ,pricess, setpricess} = useContext(flowersData)
+    const { Summer, setSummer, setCategory, pricess, setpricess } = useContext(flowersData)
     const [isChecked, setIsChecked] = useState({
         Flowers: false,
         Plants: false,
@@ -18,7 +18,7 @@ const Sidebar = () => {
         Candles: false,
         Chocolate: false,
     });
-    
+
     const handlePriceChange = (event) => {
         setpricess(event.target.checked);
     }
@@ -28,12 +28,12 @@ const Sidebar = () => {
         setCategory(event.target.value);
     }
     useEffect(() => {
-        isChecked ? handleCheckboxChange : setSummer('http://localhost:8000/Summer');
+        isChecked ? handleCheckboxChange : setCategory(null);
     }, [isChecked, setSummer])
     return (
         <>
-            <div className='col-3 d-lg-block d-md-none d-sm-none d-none'>
-                <h4>Filters</h4>
+            <div className='col-12'>
+                <h4 className='d-lg-block d-md-none d-sm-none d-none'>Filters</h4>
                 <hr />
                 <h5>Price Range</h5>
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={pricess}
@@ -72,9 +72,8 @@ const Sidebar = () => {
 
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={isChecked.Sweets}
                     onChange={handleCheckboxChange} style={{ height: '20px', width: '20px' }} value="Sweets" />&nbsp; Sweets</p>
-
-
             </div>
+
         </>
     )
 }
