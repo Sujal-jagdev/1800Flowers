@@ -7,16 +7,29 @@ import img3 from '../assets/img3.png'
 import img4 from '../assets/img4.png'
 import img5 from '../assets/img5.png'
 import img6 from '../assets/img6.png'
+import img7 from '../assets/img7.png'
+import img8 from '../assets/img8.jpg'
+import img9 from '../assets/img9.jpg'
+import img10 from '../assets/img10.jpg'
+import img11 from '../assets/img11.jpg'
+
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
-    
+    const { setSummer, totalCartProduct } = useContext(flowersData)
+    let Summerr = 'http://localhost:8000/Summer'
+    let Birthday = 'http://localhost:8000/Birthday'
+    let Sympathy = 'http://localhost:8000/Sympathy'
+    let Flowers = 'http://localhost:8000/Flowers'
+    let Plants = 'http://localhost:8000/Plants'
+
     const { data, setdata } = useContext(flowersData)
     const [FlowersList1, setFlowersList1] = useState([])
     const [FlowersList2, setFlowersList2] = useState([])
     const [FlowersList3, setFlowersList3] = useState([])
     const [FlowersList4, setFlowersList4] = useState([])
-    
+
     let FlowersListAPI = {
         API1: 'http://localhost:8000/FlowersList1',
         API2: 'http://localhost:8000/FlowersList2',
@@ -46,10 +59,11 @@ const Home = () => {
                         {
                             FlowersList1.map((e) => (
                                 <>
-                                    <div className='col-lg-2 p-1 col-md-4 col-sm-6 col-4'>
+
+                                    <Link to={'/summer'} onClick={() => setSummer(Summerr)} className='col-lg-2 p-1 col-md-4 col-sm-6 col-4 text-decoration-none text-dark'>
                                         <img src={e.image} alt="" className='col-12' />
                                         <p>{e.title}</p>
-                                    </div>
+                                    </Link>
                                 </>
                             ))
                         }
@@ -65,7 +79,7 @@ const Home = () => {
                             <img className='col-12' src={logo2} alt="" />
                         </div>
                         <p className='col-lg-3 text-center mt-2 col-md-6 col-sm-12 col-12'>We’re sorry to interrupt this daydream, but these limited-edition (and oh-so-dreamy) pieces won’t be here for long.</p>
-                        <button className=' btn bg-light text-dark fw-bold'>Shop The Collection</button>
+                        <Link to={'/summer'}><button onClick={() => setSummer(Birthday)} className=' btn bg-light text-dark fw-bold'>Shop The Collection</button></Link>
                     </div>
                 </div>
 
@@ -75,10 +89,10 @@ const Home = () => {
                         {
                             FlowersList2.map((e) => (
                                 <>
-                                    <div className='col-lg-2 p-1 col-md-4 col-sm-6 col-4'>
+                                    <Link to={'/summer'} onClick={() => setSummer(Sympathy)} className='col-lg-2 p-1 col-md-4 col-sm-6 col-4 text-decoration-none text-dark'>
                                         <img src={e.image} alt="" className='col-12' />
                                         <p>{e.title}</p>
-                                    </div>
+                                    </Link>
                                 </>
                             ))
                         }
@@ -86,15 +100,17 @@ const Home = () => {
                 </section>
 
                 <div className=' container-lg col-12'>
-                    <img className='col-12 p-3' src={img1} alt="" style={{ cursor: 'pointer' }} />
+                    <Link to={'/summer'} onClick={() => setSummer(Summerr)}><img className='col-12 p-3' src={img1} alt="" style={{ cursor: 'pointer' }} /></Link>
                     <div className='col-12'>
-                        <img src={img2} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-3' style={{ cursor: 'pointer' }} />
-                        <img src={img3} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-3' style={{ cursor: 'pointer' }} />
+                        <Link to={'/summer'} onClick={() => setSummer(Summerr)}>
+                            <img src={img2} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-3' style={{ cursor: 'pointer' }} />
+                            <img src={img3} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-3' style={{ cursor: 'pointer' }} />
+                        </Link>
                     </div>
                 </div>
 
                 <div className='col-12 container-lg mt-3' >
-                    <img src={img4} alt="" className='col-12 p-1' style={{ cursor: 'pointer' }} />
+                    <Link to={'/summer'} onClick={() => setSummer(Sympathy)}><img src={img4} alt="" className='col-12 p-1' style={{ cursor: 'pointer' }} /></Link>
                 </div>
 
                 <section className=' container-lg'>
@@ -103,10 +119,10 @@ const Home = () => {
                         {
                             FlowersList3.map((e) => (
                                 <>
-                                    <div className='col-lg-2 p-1 col-md-4 col-sm-6 col-4'>
+                                    <Link to={'/summer'} onClick={() => setSummer(Plants)} className='col-lg-2 p-1 col-md-4 col-sm-6 col-4 text-decoration-none text-dark'>
                                         <img src={e.image} alt="" className='col-12' />
                                         <p>{e.title}</p>
-                                    </div>
+                                    </Link>
                                 </>
                             ))
                         }
@@ -114,8 +130,9 @@ const Home = () => {
                 </section>
 
                 <div className='col-12 container-lg mt-3' >
-                    <img src={img5} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-1' style={{ cursor: 'pointer' }} />
-                    <img src={img6} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-1' style={{ cursor: 'pointer' }} />
+                    <Link to={'/summer'} onClick={() => setSummer(Birthday)}>
+                        <img src={img5} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-1' style={{ cursor: 'pointer' }} />
+                        <img src={img6} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-1' style={{ cursor: 'pointer' }} /></Link>
                 </div>
 
                 <h2 className=' text-center mt-4'>Trending Flowers & Gifts</h2>
@@ -123,13 +140,83 @@ const Home = () => {
                     {
                         FlowersList4.map((e) => (
                             <div className='col-lg-2 p-1 col-md-2 col-sm-3 col-5' style={{ cursor: 'pointer' }}>
-                                <img src={e.image} alt="" className='col-12' />
-                                <div className='col-12 p-1' >
-                                    <p>{e.title}</p>
-                                </div>
+                                <Link to={'/summer'} onClick={() => setSummer(Flowers)} className=' text-decoration-none text-dark'>
+                                    <img src={e.image} alt="" className='col-12' />
+                                    <div className='col-12 p-1' >
+                                        <p>{e.title}</p>
+                                    </div>
+                                </Link>
                             </div>
                         ))
                     }
+                </div>
+
+                <div className="container-lg mt-5">
+                    <div className="row">
+                        <div className="col-6 col-md-3 p-2">
+                            <img src={img8} alt="Description 1" className="img-fluid" />
+                        </div>
+                        <div className="col-6 col-md-3 p-2">
+                            <img src={img9} alt="Description 2" className="img-fluid" />
+                        </div>
+                        <div className="col-6 col-md-3 p-2">
+                            <img src={img10} alt="Description 3" className="img-fluid" />
+                        </div>
+                        <div className="col-6 col-md-3 p-2">
+                            <img src={img11} alt="Description 4" className="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+                    <div className='col-12 container-lg'>
+                        <img src={img7} alt="" className='col-12 mt-4'/>
+                    </div>
+
+                <div className='container-lg mt-3' style={{ backgroundColor: 'lightgray' }}>
+                    <h3 className=' text-center p-3'>Some of the Great Things Our Customers Say About Us</h3>
+                    <div className='col-12 d-flex align-items-center text-center flex-wrap'>
+
+                        <div className='col-lg-3 col-md-6 col-sm-6 col-12 d-flex align-items-center text-center flex-column p-2' style={{ cursor: 'pointer', borderRight: '1px solid black' }}>
+                            <div className='col-3 '>
+                                <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt4c9be4e2d955776a/602a81580aba282006983f75/hp-reviews-final-167891.png?quality=100&auto=webp" alt="" className='col-12' />
+                            </div>
+                            <p>★★★★★</p>
+                            <h4>Beautiful</h4>
+                            <p>"I bought these for my Nana’s birthday she said they were amazingly beautiful!"Pamela</p>
+                            <p>–Pamela</p>
+                        </div>
+
+                        <div className=' col-lg-3 col-md-6 col-sm-6 col-12 d-flex align-items-center text-center flex-column p-2' style={{ cursor: 'pointer', borderRight: '1px solid black' }}>
+                            <div className='col-3 '>
+                                <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt2b874f93791fce4a/62b09064482ba357e65ddbe8/web_icons_125x125_ocean_breeze_orchids.png?quality=100&auto=webp" alt="" className='col-12' />
+                            </div>
+                            <p>★★★★★</p>
+                            <h4>Best Flowers</h4>
+                            <p>"These flowers are beautiful and just as vibrant as the picture. One of the most beautiful bouquets I have ever seen!"</p>
+                            <p>– Michelle</p>
+                        </div>
+
+                        <div className=' col-lg-3 col-md-6 col-sm-6 col-12 d-flex align-items-center text-center flex-column p-2' style={{ cursor: 'pointer', borderRight: '1px solid black' }}>
+                            <div className='col-3 '>
+                                <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blte0c04d8be69858b7/6259b075b9aa584a4e32649f/web_icons_125x125_classic_budding_rose.png?quality=100&auto=webp" alt="" className='col-12' />
+                            </div>
+                            <p>★★★★★</p>
+                            <h4>Very Happy!</h4>
+                            <p>"I love how the recipient can plant the roses and enjoy them for a long time. The plant is healthy and the candle I ordered with it smells great!"</p>
+                            <p>– Betty</p>
+                        </div>
+
+                        <div className=' col-lg-3 col-md-6 col-sm-6 col-12 d-flex align-items-center text-center flex-column p-2' style={{ cursor: 'pointer' }}>
+                            <div className='col-3 '>
+                                <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt345841a83a3efa97/6238bb5a8ee56a1b0ac2fa6d/web_icons_125x125_Gourmet_Drizzled_Berries-v2.webp?quality=100&auto=webp" alt="" className='col-12' />
+                            </div>
+                            <p>★★★★★</p>
+                            <h4>Sweet Anniversary</h4>
+                            <p>"The strawberries arrived on time and were fantastic as always. Definitely made my anniversary a lot sweeter!"</p>
+                            <p>– Brian</p>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>

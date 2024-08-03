@@ -39,14 +39,13 @@ const Sidebar = () => {
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={pricess}
                     onChange={handlePriceChange} value={75} style={{ height: '20px', width: '20px' }} />&nbsp; Under $75</p>
                 <p className='d-flex  align-items-center'><input type="checkbox" style={{ height: '20px', width: '20px' }} />&nbsp; 75 to $100</p>
-                <p className='d-flex  align-items-center'><input type="checkbox" style={{ height: '20px', width: '20px' }} />&nbsp; $100 to $200</p>
-                <p className='d-flex  align-items-center'><input type="checkbox" style={{ height: '20px', width: '20px' }} />&nbsp; Above $200</p>
+                <p className='d-flex  align-items-center'><input type="checkbox" style={{ height: '20px', width: '20px' }} />&nbsp; To $200</p>
                 <hr />
                 <h4>Assortment Contains</h4>
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={isChecked.Flowers}
-                    onChange={handleCheckboxChange} style={{ height: '20px', width: '20px' }} value="Flowers" />&nbsp; Flowers</p>
+                    onChange={handleCheckboxChange} style={{ height: '20px', width: '20px' }} value={"Flowers" || ''} />&nbsp; Flowers</p>
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={isChecked.Plants}
-                    onChange={handleCheckboxChange} style={{ height: '20px', width: '20px' }} value="Plants" />&nbsp; Plants</p>
+                    onChange={handleCheckboxChange} style={{ height: '20px', width: '20px' }} value={"Plants" || ''} />&nbsp; Plants</p>
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={isChecked.ChocolateDippedStrawberry}
                     onChange={handleCheckboxChange} style={{ height: '20px', width: '20px' }} value="Chocolate Dipped Strawberry" />&nbsp; Chocolate Dipped Strawberry</p>
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={isChecked.Chocolate}
@@ -73,7 +72,6 @@ const Sidebar = () => {
                 <p className='d-flex  align-items-center'><input type="checkbox" checked={isChecked.Sweets}
                     onChange={handleCheckboxChange} style={{ height: '20px', width: '20px' }} value="Sweets" />&nbsp; Sweets</p>
             </div>
-
         </>
     )
 }

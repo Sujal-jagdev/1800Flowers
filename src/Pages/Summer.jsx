@@ -2,24 +2,37 @@ import React, { useContext, useEffect, useState } from 'react'
 import Sidebar from '../Components/Sidebar'
 import axios from 'axios';
 import { flowersData } from '../Context';
+import { Link } from 'react-router-dom';
+import Loader from '../Components/Loader';
 
 const Summer = () => {
-
-    const { summerData, setSummerData, Summer, category, setCategory, pricess, setpricess } = useContext(flowersData)
+    const [sort, setSort] = useState(null)
+    const [orderDecide, setorderDecide] = useState('')
+    const [load, setload] = useState(true)
+    const handleChange = (e) => {
+        setSort(e)
+        setorderDecide(true)
+    }
+    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage } = useContext(flowersData)
     let my = 0
     const getData = () => {
         axios.get(Summer, {
             params: {
-                category: category
+                category: category,
+                _page: page,
+                _limit: 15,
+                _sort: orderDecide ? 'price' : '',
+                _order: sort
             }
         }).then((res) => {
             setSummerData(res.data);
+            setload(false)
 
         }).catch((err) => console.log(err))
     }
     useEffect(() => {
         getData()
-    }, [my, Summer, category, pricess,])
+    }, [page, category, pricess, Summer, setSummerData, sort, load])
 
     if (summerData.length > 0) {
         my = summerData[summerData.length - 1];
@@ -43,10 +56,10 @@ const Summer = () => {
                         <header className='col-12 d-lg-flex d-md-flex d-sm-flex justify-content-between align-items-center '>
                             <h5 className=' text-center'>{my.id} Results</h5>
                             <div className='d-flex align-items-center justify-content-between col-lg-4 col-md-7 col-sm-8'>
-                                <select name="" id="" className='p-1 col-lg-10 col-md-7 col-sm-7 col-7'>
-                                    <option value="">Sort By</option>
-                                    <option value="">High To Low</option>
-                                    <option value="">Low To High</option>
+                                <select name="" id="" className='p-1 col-lg-10 col-md-7 col-sm-7 col-7' onChange={(e) => handleChange(e.target.value)}>
+                                    <option value={null}>Sort By</option>
+                                    <option value="desc">High To Low</option>
+                                    <option value="asc">Low To High</option>
                                 </select>
                                 <button className='d-lg-none d-block btn border border-3 col-md-3 col-sm-3 col-4' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
                             </div>
@@ -54,11 +67,13 @@ const Summer = () => {
 
                         <div className="main col-12 d-flex flex-wrap">
                             {
-                                summerData.filter(e => pricess ? e.price < 75 : true).map((e) => (
+                                load ? <Loader/> : summerData.filter(e => pricess ? e.price < 75 : true).map((e) => (
                                     <div className='col-lg-4 p-2 col-md-4 col-sm-6 col-6'>
-                                        <img src={e.imageUrl} alt="" className=' col-12' />
-                                        <h5>{e.title}</h5>
-                                        <p>${e.price}</p>
+                                        <Link to={`/description/${e.id}`} className='text-decoration-none'>
+                                            <img src={e.image} alt="" className=' col-12' />
+                                            <h5 className='text-dark'>{e.title}</h5>
+                                            <p className=' text-dark'>${e.price}</p>
+                                        </Link>
                                     </div>
                                 ))
                             }
@@ -76,6 +91,11 @@ const Summer = () => {
                 <div class="offcanvas-body " style={{ marginTop: '-7%' }}>
                     <Sidebar />
                 </div>
+            </div>
+            <div className='col-12 d-flex align-items-lg-center justify-content-center'>
+                <button className=' btn bg-primary text-light m-2' onClick={() => setpage(page - 1)} disabled={page == 1}>Previous</button>
+                <button className=' btn bg-primary text-light m-2' disabled>{page}</button>
+                <button className=' btn bg-primary text-light m-2' onClick={() => setpage(page + 1)} disabled={summerData.length < 10}>next</button>
             </div>
         </>
     )
