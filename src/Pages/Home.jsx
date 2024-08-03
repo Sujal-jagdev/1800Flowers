@@ -169,7 +169,7 @@ const Home = () => {
                 </div>
 
                     <div className='col-12 container-lg'>
-                        <img src={img7} alt="" className='col-12 mt-4'/>
+                        <Link Link to={'/summer'} onClick={() => setSummer(Summerr)}><img src={img7} alt="" className='col-12 mt-4'style={{cursor: 'pointer'}}/></Link>
                     </div>
 
                 <div className='container-lg mt-3' style={{ backgroundColor: 'lightgray' }}>
