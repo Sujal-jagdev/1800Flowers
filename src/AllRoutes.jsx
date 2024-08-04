@@ -6,6 +6,7 @@ import Register from './Pages/Register'
 import Summer from './Pages/Summer'
 import Description from './Pages/Description'
 import Cart from './Pages/Cart'
+import PrivatePage from './Components/PrivatePage'
 
 const AllRoutes = () => {
   return (
@@ -15,7 +16,13 @@ const AllRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/summer" element={<Summer />} />
       <Route path="/description/:id" element={<Description />} />
-      <Route path="/cart" element={<Cart />} />
+      
+        <Route path="/cart" element={
+          <PrivatePage>
+          <Cart />
+      </PrivatePage>
+          
+          } />
     </Routes>
   )
 }

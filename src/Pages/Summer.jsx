@@ -72,7 +72,7 @@ const Summer = () => {
                                         <Link to={`/description/${e.id}`} className='text-decoration-none'>
                                             <img src={e.image} alt="" className=' col-12' />
                                             <h5 className='text-dark'>{e.title}</h5>
-                                            <p className=' text-dark'>${e.price}</p>
+                                            <p className='text-dark'>${e.price}</p>
                                         </Link>
                                     </div>
                                 ))

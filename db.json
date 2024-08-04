@@ -2466,6 +2466,18 @@
       "price": 54.99,
       "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/100550mprsv1cn3x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
       "id": 4
+    },
+    {
+      "title": "Fiona Flamingo Mini Palm Plant",
+      "price": 39.99,
+      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158111sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "id": 5
+    },
+    {
+      "title": "Fields of Europe Summer",
+      "price": 54.99,
+      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191119xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "id": 6
     }
   ]
 }

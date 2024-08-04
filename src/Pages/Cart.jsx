@@ -5,10 +5,10 @@ import { flowersData } from '../Context'
 
 const Cart = () => {
     const [cartSdata, setcartSdata] = useState([])
-    const {totalCartProduct, settotalCartProduct} = useContext(flowersData)
+    const { totalCartProduct, settotalCartProduct } = useContext(flowersData)
 
-    const showData = ()=>{
-        axios.get('http://localhost:8000/Cart/').then((res)=>setcartSdata(res.data))
+    const showData = () => {
+        axios.get('http://localhost:8000/Cart/').then((res) => setcartSdata(res.data))
     }
     useEffect(() => {
         showData()
@@ -17,11 +17,11 @@ const Cart = () => {
         settotalCartProduct(cartSdata[cartSdata.length - 1])
     }
 
-    const delteProduct = (id)=>{
-        axios.delete(`http://localhost:8000/Cart/${id}`).then((res)=>alert('Product Deleted From Cart'))
+    const delteProduct = (id) => {
+        axios.delete(`http://localhost:8000/Cart/${id}`).then((res) => alert('Product Deleted From Cart'))
         showData()
     }
-    
+
     return (
         <>
             <div className="main col-12 d-flex flex-wrap container-lg">
@@ -31,7 +31,7 @@ const Cart = () => {
                             <img src={e.image} alt="" className=' col-12' />
                             <h5 className='text-dark'>{e.title}</h5>
                             <p className=' text-dark'>${e.price}</p>
-                            <button  className=' btn bg-danger text-light' onClick={()=>delteProduct(e.id)}>Delete From Cart</button>
+                            <button className=' btn bg-danger text-light' onClick={() => delteProduct(e.id)}>Delete From Cart</button>
                         </div>
                     ))
                 }
