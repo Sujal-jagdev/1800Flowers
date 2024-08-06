@@ -18,7 +18,7 @@ const Login = () => {
       })
       .catch((err) => console.log(err))
   }
-axios.get('http://localhost:8000/RegisterData').map
+axios.get('http://localhost:8000/RegisterData')
   const handleLogin2 = (e)=>{
     e.preventDefault()
       // if(email == )
