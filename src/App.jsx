@@ -4,6 +4,7 @@ import AllRoutes from './AllRoutes'
 import Footer from './Components/Footer'
 
 const App = () => {
+  
   return (
     <>
       <Navbar />

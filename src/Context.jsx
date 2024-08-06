@@ -9,6 +9,7 @@ export const FlowersProvider = ({ children }) => {
     const [pricess, setpricess] = useState(false)
     const [page, setpage] = useState(1)
    const [totalCartProduct, settotalCartProduct] = useState(0)
+   const [isLog, setisLog] = useState(false)
 
     return (
         <flowersData.Provider value={{
@@ -17,7 +18,8 @@ export const FlowersProvider = ({ children }) => {
             category, setCategory,
             pricess, setpricess,
             page, setpage,
-            totalCartProduct, settotalCartProduct
+            totalCartProduct, settotalCartProduct,
+            isLog, setisLog
         }}>
             {children}
         </flowersData.Provider>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { CiUser } from "react-icons/ci";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
@@ -6,14 +6,19 @@ import { RiMenuSearchLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { flowersData } from '../Context';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../Services/firebase';
 
 const Navbar = () => {
-  const { Summer, setSummer,totalCartProduct } = useContext(flowersData)
+  const [provider, setProvider] = useState([])
+  const { Summer, setSummer, totalCartProduct } = useContext(flowersData)
   let Summerr = 'http://localhost:8000/Summer'
   let Birthday = 'http://localhost:8000/Birthday'
   let Sympathy = 'http://localhost:8000/Sympathy'
   let Flowers = 'http://localhost:8000/Flowers'
   let Plants = 'http://localhost:8000/Plants'
+
+  const [user] = useAuthState(auth);
 
   return (
     <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12 " style={{ backgroundColor: '#fff' }}>
@@ -26,7 +31,7 @@ const Navbar = () => {
             <button className='btn text-light' style={{ backgroundColor: '#522C73', height: '45px', marginTop: '-6px' }}>SEARCH</button>
           </div>
           <div className="option d-lg-flex d-md-flex col-lg-3 col-md-4 gap-5 align-items-center pt-3 justify-content-end d-sm-none d-none">
-            <Link to={'/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><CiUser className='fs-2' />SignIn</Link>
+            <Link to={user ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : <CiUser className='fs-2' />}{user ? user.displayName : 'SignIn'}</Link>
             <Link className='d-flex flex-column align-items-center text-decoration-none text-dark'><CiDeliveryTruck className='fs-2' />MyOrders</Link>
             <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct.id})Cart</Link>
           </div>
@@ -37,7 +42,7 @@ const Navbar = () => {
           <Link to={'/summer'} onClick={() => setSummer(Birthday)} className='text-decoration-none text-dark' style={{ cursor: 'pointer' }}><h6>Birthday</h6></Link>
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Sympathy)} style={{ cursor: 'pointer' }}>Sympathy</h6></Link>
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Flowers)} style={{ cursor: 'pointer' }}>Flowers</h6></Link>
-          <Link  to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Plants)} style={{ cursor: 'pointer' }}>Plants</h6></Link>
+          <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Plants)} style={{ cursor: 'pointer' }}>Plants</h6></Link>
           <h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}>Gift Baskets & Food</h6>
           <h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}>Gifts & More</h6>
           <h6 onClick={() => setSummer(Summerr)} style={{ cursor: 'pointer' }}>Sale</h6>
@@ -58,7 +63,7 @@ const Navbar = () => {
           </div>
 
           <div className="option d-flex gap-5 align-items-center pt-3 col-12 justify-content-center">
-            <Link to={'/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><CiUser className='fs-2' />SignIn</Link>
+            <Link to={'/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : <CiUser className='fs-2' />}SignIn</Link>
             <Link className='d-flex flex-column align-items-center text-decoration-none text-dark'><CiDeliveryTruck className='fs-2' />MyOrders</Link>
             <Link className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />(0)Cart</Link>
           </div>

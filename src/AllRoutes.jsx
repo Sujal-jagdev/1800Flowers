@@ -14,15 +14,21 @@ const AllRoutes = () => {
       <Route path='/' element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/summer" element={<Summer />} />
-      <Route path="/description/:id" element={<Description />} />
-      
-        <Route path="/cart" element={
-          <PrivatePage>
+      <Route path="/summer" element={
+        <PrivatePage>
+          <Summer />
+        </PrivatePage>} />
+      <Route path="/description/:id" element={
+        <PrivatePage>
+          <Description />
+        </PrivatePage>
+      } />
+
+      <Route path="/cart" element={
+        <PrivatePage>
           <Cart />
-      </PrivatePage>
-          
-          } />
+        </PrivatePage>
+      } />
     </Routes>
   )
 }

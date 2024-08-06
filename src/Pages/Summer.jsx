@@ -13,7 +13,7 @@ const Summer = () => {
         setSort(e)
         setorderDecide(true)
     }
-    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage } = useContext(flowersData)
+    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage, isLog, setisLog } = useContext(flowersData)
     let my = 0
     const getData = () => {
         axios.get(Summer, {
@@ -32,7 +32,7 @@ const Summer = () => {
     }
     useEffect(() => {
         getData()
-    }, [page, category, pricess, Summer, setSummerData, sort, load])
+    }, [page, category, pricess, Summer, setSummerData, sort, load, isLog])
 
     if (summerData.length > 0) {
         my = summerData[summerData.length - 1];
@@ -67,7 +67,7 @@ const Summer = () => {
 
                         <div className="main col-12 d-flex flex-wrap">
                             {
-                                load ? <Loader/> : summerData.filter(e => pricess ? e.price < 75 : true).map((e) => (
+                                load ? <Loader /> : summerData.filter(e => pricess ? e.price < 75 : true).map((e) => (
                                     <div className='col-lg-4 p-2 col-md-4 col-sm-6 col-6'>
                                         <Link to={`/description/${e.id}`} className='text-decoration-none'>
                                             <img src={e.image} alt="" className=' col-12' />
@@ -83,12 +83,12 @@ const Summer = () => {
             </div>
 
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
+            <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div className="offcanvas-header">
                     <h2 id="offcanvasRightLabel">Filters</h2>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body " style={{ marginTop: '-7%' }}>
+                <div className="offcanvas-body " style={{ marginTop: '-7%' }}>
                     <Sidebar />
                 </div>
             </div>
