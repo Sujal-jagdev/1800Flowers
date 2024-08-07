@@ -6,14 +6,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../Services/firebase';
 
 const PrivatePage = ({ children }) => {
-    const { isLog, setisLog } = useContext(flowersData)
+    const { isLog, setisLog,LogSuccess } = useContext(flowersData)
     const [user] = useAuthState(auth);
-    if (!user) {
-        alert("After Login You Can Access All Features And Pages")
-        return <Navigate to={'/login'} />
+    if (user || LogSuccess) {
+        return children
     }
     else {
-        return children;
+        alert("After Login You Can Access All Features And Pages")
+        return <Navigate to={'/login'} />
     }
 }
 

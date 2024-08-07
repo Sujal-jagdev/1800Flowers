@@ -1,11 +1,15 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Navigate } from 'react-router-dom'
+import { flowersData } from '../Context'
 
 const Register = () => {
+  const { LogSuccess, setLogSuccess } = useContext(flowersData)
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [Name, setName] = useState('')
+  const [Name, setName] = useState('');
+
   const handleLogin2 = (e) => {
     e.preventDefault()
     let logData = {
@@ -14,11 +18,13 @@ const Register = () => {
       password
     }
     if (password == '' || email == '' || Name == '') {
-      alert("Fell All Fields")
+      alert("Feil All Fields")
     }
     else {
       axios.post('http://localhost:8000/RegisterData', logData).then((res) => {
-        alert("You Are Registered")})
+        alert("You Are Registered")
+        setLogSuccess(true)
+      })
     }
   }
   return (
@@ -39,7 +45,7 @@ const Register = () => {
           <span>Password:</span><br />
           <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" className='col-12 p-2' />
         </div>
-        <input type="submit" onClick={(e) => handleLogin2(e)} value={'Sign In'} className=' btn bg-primary text-light mt-3' />
+        <input type="submit" onClick={(e) => handleLogin2(e)} value={'Sign Up'} className=' btn bg-primary text-light mt-3' />
       </form>
     </>
   )

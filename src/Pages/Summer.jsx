@@ -13,7 +13,7 @@ const Summer = () => {
         setSort(e)
         setorderDecide(true)
     }
-    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage, isLog, setisLog } = useContext(flowersData)
+    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage, isLog, setisLog,search } = useContext(flowersData)
     let my = 0
     const getData = () => {
         axios.get(Summer, {
@@ -22,7 +22,8 @@ const Summer = () => {
                 _page: page,
                 _limit: 15,
                 _sort: orderDecide ? 'price' : '',
-                _order: sort
+                _order: sort,
+                q: search
             }
         }).then((res) => {
             setSummerData(res.data);
@@ -32,7 +33,7 @@ const Summer = () => {
     }
     useEffect(() => {
         getData()
-    }, [page, category, pricess, Summer, setSummerData, sort, load, isLog])
+    }, [page, category, pricess, Summer, setSummerData, sort, load, isLog,search])
 
     if (summerData.length > 0) {
         my = summerData[summerData.length - 1];

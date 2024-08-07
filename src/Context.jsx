@@ -5,11 +5,14 @@ export const flowersData = createContext();
 export const FlowersProvider = ({ children }) => {
     const [summerData, setSummerData] = useState([])
     const [category, setCategory] = useState(null)
-    const [Summer, setSummer] = useState(`http://localhost:8000/Summer`)
+    const [Summer, setSummer] = useState(``)
     const [pricess, setpricess] = useState(false)
     const [page, setpage] = useState(1)
    const [totalCartProduct, settotalCartProduct] = useState(0)
    const [isLog, setisLog] = useState(false)
+   const [search, setSearch] = useState('');
+   const [LogSuccess, setLogSuccess] = useState(false)
+   
 
     return (
         <flowersData.Provider value={{
@@ -19,7 +22,9 @@ export const FlowersProvider = ({ children }) => {
             pricess, setpricess,
             page, setpage,
             totalCartProduct, settotalCartProduct,
-            isLog, setisLog
+            isLog, setisLog,
+            search, setSearch,
+            LogSuccess, setLogSuccess
         }}>
             {children}
         </flowersData.Provider>

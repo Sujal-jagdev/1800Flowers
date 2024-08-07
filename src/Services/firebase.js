@@ -11,7 +11,7 @@ const firebaseConfig = {
   storageBucket: "flowerslogin-f4de6.appspot.com",
   messagingSenderId: "561622247043",
   appId: "1:561622247043:web:905f867d17374ae28a9db6",
-  measurementId: "G-FD18DSDZ6Y"
+  measurementId: "G-FD18DSDZ6Y",
 };
 
 // Initialize Firebase
