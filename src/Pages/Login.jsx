@@ -8,7 +8,7 @@ import Summer from './Summer'
 import axios from 'axios'
 
 const Login = () => {
-  const { isLog, setisLog,setLogSuccess } = useContext(flowersData)
+  const { isLog, setisLog, setLogSuccess } = useContext(flowersData)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [myEmail, setmyEmail] = useState('')
@@ -30,7 +30,10 @@ const Login = () => {
   const handleLogin2 = (e) => {
     e.preventDefault()
 
-    if (email == myEmail && password == mypassword) {
+    if (email == '' || password == '') {
+      alert('Must Be Filled Email Password')
+    }
+    else if (email == myEmail && password == mypassword) {
       alert('You Are Success Fully Login')
       setLogSuccess(true)
     }
