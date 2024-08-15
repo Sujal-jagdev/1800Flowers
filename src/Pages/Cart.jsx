@@ -1,12 +1,11 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import { flowersData } from '../Context'
 
 const Cart = () => {
     const [cartSdata, setcartSdata] = useState([])
-    const { totalCartProduct, settotalCartProduct } = useContext(flowersData)
-
+    const { settotalCartProduct } = useContext(flowersData)
+    
     const showData = () => {
         axios.get('http://localhost:8000/Cart/').then((res) => setcartSdata(res.data))
     }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react';
 import { CiUser } from "react-icons/ci";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
@@ -12,18 +12,19 @@ import axios from 'axios';
 
 const Navbar = () => {
   const [provider, setProvider] = useState('')
-  const { Summer, setSummer, totalCartProduct, search, setSearch,LogSuccess } = useContext(flowersData)
-  let Summerr = 'http://localhost:8000/Summer'
-  let Birthday = 'http://localhost:8000/Birthday'
-  let Sympathy = 'http://localhost:8000/Sympathy'
-  let Flowers = 'http://localhost:8000/Flowers'
-  let Plants = 'http://localhost:8000/Plants'
+  const { setSummer, totalCartProduct, search, setSearch, LogSuccess } = useContext(flowersData);
+  let Summerr = 'http://localhost:8000/Summer';
+  let Birthday = 'http://localhost:8000/Birthday';
+  let Sympathy = 'http://localhost:8000/Sympathy';
+  let Flowers = 'http://localhost:8000/Flowers';
+  let Plants = 'http://localhost:8000/Plants';
+  let Gift_Baskets = 'http://localhost:8000/Gift-Baskets';
 
   const [user] = useAuthState(auth);
 
   axios.get('http://localhost:8000/RegisterData').then((res) => {
-    res.data.map((e) => setProvider(e.Name))
-  })
+    res.data.map((e) => setProvider(e.Name));
+  });
 
   return (
     <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12 " style={{ backgroundColor: '#fff' }}>
@@ -49,10 +50,10 @@ const Navbar = () => {
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Sympathy)} style={{ cursor: 'pointer' }}>Sympathy</h6></Link>
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Flowers)} style={{ cursor: 'pointer' }}>Flowers</h6></Link>
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Plants)} style={{ cursor: 'pointer' }}>Plants</h6></Link>
-          <h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}>Gift Baskets & Food</h6>
-          <h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}>Gifts & More</h6>
-          <h6 onClick={() => setSummer(Summerr)} style={{ cursor: 'pointer' }}>Sale</h6>
-          <h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}> Community</h6>
+          <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Gift_Baskets)} style={{ cursor: 'pointer' }}>Gift Baskets & Food</h6></Link>
+          <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}>Gifts & More</h6></Link>
+          <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Summerr)} style={{ cursor: 'pointer' }}>Sale</h6></Link>
+          <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}> Community</h6></Link>
         </div>
       </nav>
 

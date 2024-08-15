@@ -1,19 +1,19 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Sidebar from '../Components/Sidebar'
+import React, { useContext, useEffect, useState } from 'react';
+import Sidebar from '../Components/Sidebar';
 import axios from 'axios';
 import { flowersData } from '../Context';
 import { Link } from 'react-router-dom';
 import Loader from '../Components/Loader';
 
 const Summer = () => {
-    const [sort, setSort] = useState(null)
-    const [orderDecide, setorderDecide] = useState('')
-    const [load, setload] = useState(true)
+    const [sort, setSort] = useState(null);
+    const [orderDecide, setorderDecide] = useState('');
+    const [load, setload] = useState(true);
     const handleChange = (e) => {
-        setSort(e)
-        setorderDecide(true)
+        setSort(e);
+        setorderDecide(true);
     }
-    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage, isLog, setisLog,search } = useContext(flowersData)
+    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage, isLog, setisLog, search } = useContext(flowersData);
     let my = 0
     const getData = () => {
         axios.get(Summer, {
@@ -27,17 +27,17 @@ const Summer = () => {
             }
         }).then((res) => {
             setSummerData(res.data);
-            setload(false)
+            setload(false);
 
-        }).catch((err) => console.log(err))
+        }).catch((err) => console.log(err));
     }
     useEffect(() => {
-        getData()
-    }, [page, category, pricess, Summer, setSummerData, sort, load, isLog,search])
+        getData();
+    }, [page, category, pricess, Summer, setSummerData, sort, load, isLog, search]);
 
     if (summerData.length > 0) {
         my = summerData[summerData.length - 1];
-    }
+    };
 
     return (
         <>
@@ -53,11 +53,10 @@ const Summer = () => {
                         <Sidebar />
                     </div>
                     <div className='col-lg-9 col-12'>
-
-                        <header className='col-12 d-lg-flex d-md-flex d-sm-flex justify-content-between align-items-center '>
+                        <header className='col-12 d-lg-flex d-md-flex d-sm-flex justify-content-between align-items-center'>
                             <h5 className=' text-center'>{my.id} Results</h5>
                             <div className='d-flex align-items-center justify-content-between col-lg-4 col-md-7 col-sm-8'>
-                                <select name="" id="" className='p-1 col-lg-10 col-md-7 col-sm-7 col-7' onChange={(e) => handleChange(e.target.value)}>
+                                <select className='p-1 col-lg-10 col-md-7 col-sm-7 col-7' onChange={(e) => handleChange(e.target.value)}>
                                     <option value={null}>Sort By</option>
                                     <option value="desc">High To Low</option>
                                     <option value="asc">Low To High</option>
@@ -65,13 +64,11 @@ const Summer = () => {
                                 <button className='d-lg-none d-block btn border border-3 col-md-3 col-sm-3 col-4' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
                             </div>
                         </header>
-
                         <div className="main col-12 d-flex flex-wrap">
                             {
                                 load ? <Loader /> : summerData.filter(e => pricess ? e.price < 75 : true).map((e) => (
                                     <div className='col-lg-4 p-2 col-md-4 col-sm-6 col-6'>
-                                        <Link to={`/description/${e.id}`} className='text-decoration-none'>
-                                            <img src={e.image} alt="" className=' col-12' />
+                                        <Link to={`/description/${e.id}`} className='text-decoration-none'>                                            <img src={e.image} alt="" className=' col-12' />
                                             <h5 className='text-dark'>{e.title}</h5>
                                             <p className='text-dark'>${e.price}</p>
                                         </Link>

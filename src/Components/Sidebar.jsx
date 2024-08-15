@@ -1,9 +1,8 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react';
 import { flowersData } from '../Context';
 
 const Sidebar = () => {
-    const { Summer, setSummer, setCategory, pricess, setpricess } = useContext(flowersData)
+    const { setSummer, setCategory, pricess, setpricess } = useContext(flowersData);
     const [isChecked, setIsChecked] = useState({
         Flowers: false,
         Plants: false,
@@ -29,7 +28,7 @@ const Sidebar = () => {
     }
     useEffect(() => {
         isChecked ? handleCheckboxChange : setCategory(null);
-    }, [isChecked, setSummer])
+    }, [isChecked, setSummer]);
     return (
         <>
             <div className='col-12'>

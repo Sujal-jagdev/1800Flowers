@@ -4,11 +4,10 @@ import GoogleButton from 'react-google-button'
 import { signInWithPopup } from 'firebase/auth'
 import { auth, provider } from '../Services/firebase'
 import { flowersData } from '../Context'
-import Summer from './Summer'
 import axios from 'axios'
 
 const Login = () => {
-  const { isLog, setisLog,setLogSuccess } = useContext(flowersData)
+  const { setisLog, setLogSuccess } = useContext(flowersData)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [myEmail, setmyEmail] = useState('')

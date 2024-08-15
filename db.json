@@ -117,6 +117,10 @@
   ],
   "Summer": [
     {
+      "HeadTitle": "Summer Flower Arrangements, Bouquets & Gifts",
+      "HeadDesc": "It’s the season to celebrate, and we have more ways than ever to send a smile! From colorful summer flower arrangements, bouquets & summer wreaths to blooming summer plants, long stem sunflowers, & fun summer gifts for delivery, trust us to help you celebrate the season!"
+    },
+    {
       "id": 1,
       "title": "Fields of Europe Summer",
       "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191119xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
@@ -2490,6 +2494,18 @@
       "price": 99.99,
       "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/mk022466x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
       "id": 9
+    },
+    {
+      "title": "Fields of Europe Summer",
+      "price": 54.99,
+      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191119xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "id": 10
+    },
+    {
+      "title": "Fiona Flamingo Mini Palm Plant",
+      "price": 39.99,
+      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158111sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "id": 11
     }
   ],
   "RegisterData": [
@@ -2499,5 +2515,154 @@
       "password": "12345",
       "id": 1
     }
+  ],
+  "Gift-Baskets": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "category": "Plants",
+      "price": 19.99,
+      "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/149540_22x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "category": "Chocolate Dipped Strawberry",
+      "price": 29.99,
+      "image": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/174978SU_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "category": "Chocolate",
+      "price": 15.99,
+      "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/195035_23x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "category": "Apparel",
+      "price": 45.00,
+      "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/41421SU_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "category": "Candy",
+      "price": 12.99,
+      "image": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/94702_22x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "category": "Baked Goods",
+      "price": 25.00,
+      "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/171491L21x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 7,
+      "name": "Product 7",
+      "category": "Cake",
+      "price": 50.00,
+      "image": "https://cdn1.simplychocolate.com/wcsstore/SimplyChocolate/images/catalog/163532dx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 8,
+      "name": "Product 8",
+      "category": "Candles",
+      "price": 8.99,
+      "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/175009D21x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 9,
+      "name": "Product 9",
+      "category": "Plush Toy",
+      "price": 20.00,
+      "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/173061L_22x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 10,
+      "name": "Product 10",
+      "category": "Sweets",
+      "price": 18.50,
+      "image": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/196345lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 11,
+      "name": "Product 11",
+      "category": "Fresh Fruit",
+      "price": 22.00,
+      "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/41126L21x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 12,
+      "name": "Product 12",
+      "category": "Meat",
+      "price": 40.00,
+      "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/195331_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 13,
+      "name": "Product 13",
+      "category": "Nuts",
+      "price": 14.99,
+      "image": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/195304_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 14,
+      "name": "Product 14",
+      "category": "Tote Bag",
+      "price": 30.00,
+      "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/162468L_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 15,
+      "name": "Product 15",
+      "category": "Popcorn",
+      "price": 10.99,
+      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/mk032758x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 16,
+      "name": "Product 16",
+      "category": "Keepsake",
+      "price": 27.50,
+      "image": "https://cdn2.simplychocolate.com/wcsstore/SimplyChocolate/images/catalog/179826_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 17,
+      "name": "Product 17",
+      "category": "Spa",
+      "price": 35.00,
+      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/mk033441x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 18,
+      "name": "Product 18",
+      "category": "Cake Pop",
+      "price": 24.99,
+      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/196348lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 19,
+      "name": "Product 19",
+      "category": "Home and Kitchenware",
+      "price": 50.00,
+      "image": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/175230_23x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 20,
+      "name": "Product 20",
+      "category": "Chocolate Dipped Strawberry",
+      "price": 33.00,
+      "image": "https://cdn2.harryanddavid.com/wcsstore/HarryAndDavid/images/catalog/19_75_30X_03ex.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    },
+    {
+      "id": 21,
+      "name": "Product 21",
+      "category": "Baked Goods",
+      "price": 21.99,
+      "image": "https://cdn2.harryanddavid.com/wcsstore/HarryAndDavid/images/catalog/24_0027192_30JD_23_036x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
+    }
   ]
-}
+} 
