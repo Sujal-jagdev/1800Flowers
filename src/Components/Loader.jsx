@@ -1,1 +1,8 @@
-import React from 'react';const Loader = () => <h1 className='text-center col-12 mt-5'>Loading Data...</h1>;export default Loader
+import React from 'react';
+import loader from '../assets/loader.gif'
+
+const Loader = () => <div className=' col-12 text-center'>
+    <img src={loader} className='text-center m-5 col-4' alt="" />
+</div>
+
+export default Loader

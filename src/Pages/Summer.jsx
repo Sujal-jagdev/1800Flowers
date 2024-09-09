@@ -12,6 +12,7 @@ const Summer = () => {
     const [headData, setheadData] = useState([]);
     const [totalProduct, settotalProduct] = useState(0)
 
+    // ### Sorting ###
     const handleChange = (e) => {
         setSort(e);
         setorderDecide(true);
@@ -47,7 +48,6 @@ const Summer = () => {
 
     // ### Shoo Total Products In Page
     summerData.map((e, i) => me = i + 1)
-    console.log(me)
 
     return (
         <>

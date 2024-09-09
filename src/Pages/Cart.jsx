@@ -29,7 +29,9 @@ const Cart = () => {
         <>
             <div className="main col-12 d-flex flex-wrap container-lg">
                 {
-                    cartSdata == '' ? <h2 className=' text-center col-12 mt-5'>!!Cart Is Empty!!</h2> : cartSdata.map((e) => (
+                    cartSdata == '' ? <div className=' col-12 text-center'>
+                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-yrKy00koNPRSg-MAE5rkMmy2HiIAE4U_HQ&s' className='col-3 mt-5' />
+                    </div> : cartSdata.map((e) => (
                         <div className='col-lg-3 p-2 col-md-4 col-sm-6 col-12 '>
                             <img src={e.image} alt="" className=' col-12' />
                             <h5 className='text-dark'>{e.title}</h5>
