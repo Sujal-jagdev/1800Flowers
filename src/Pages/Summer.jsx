@@ -9,12 +9,18 @@ const Summer = () => {
     const [sort, setSort] = useState(null);
     const [orderDecide, setorderDecide] = useState('');
     const [load, setload] = useState(true);
+    const [headData, setheadData] = useState([]);
+    const [totalProduct, settotalProduct] = useState(0)
+
     const handleChange = (e) => {
         setSort(e);
         setorderDecide(true);
     }
-    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage, isLog, setisLog, search } = useContext(flowersData);
-    let my = 0
+    const { summerData, setSummerData, Summer, category, setCategory, pricess, page, setpage, isLog, setisLog, search, Summerr, Birthday, Flowers, Plants, Gift_Baskets, Sympathy } = useContext(flowersData);
+
+    let me = 0
+
+    //### Get Data From Api ###
     const getData = () => {
         axios.get(Summer, {
             params: {
@@ -31,30 +37,96 @@ const Summer = () => {
 
         }).catch((err) => console.log(err));
     }
+
+
+
     useEffect(() => {
+        axios.get('http://localhost:8000/headInfo').then((res) => setheadData(res.data))
         getData();
     }, [page, category, pricess, Summer, setSummerData, sort, load, isLog, search]);
 
-    if (summerData.length > 0) {
-        my = summerData[summerData.length - 1];
-    };
+    // ### Shoo Total Products In Page
+    summerData.map((e, i) => me = i + 1)
+    console.log(me)
 
     return (
         <>
             <div className=' container-lg col-12 mt-4'>
 
                 <div className='col-12 d-lg-flex justify-content-between'>
-                    <h3 className='col-lg-5 col-md-12 col-12' >Summer Flower Arrangements, Bouquets & Gifts</h3>
-                    <p className='col-lg-6 col-md-12 col-12'>It’s the season to celebrate, and we have more ways than ever to send a smile! From colorful summer flower arrangements, bouquets & summer wreaths to blooming summer plants, long stem sunflowers, & fun summer gifts for delivery, trust us to help you celebrate the season!</p>
+                    {
+                        Summer == Summerr ? headData.map((e) => (
+                            <>
+                                {
+                                    e.id == "Summer" ? <>
+                                        <h3 className='col-lg-5 col-md-12 col-12'>{e.headTitle}</h3>
+                                        <p className='col-lg-7 col-md-12 col-12'>{e.headDescription}</p>
+                                    </> : ''
+                                }
+
+                            </>
+                        )) : Summer == Birthday ? headData.map((e) => (
+                            <>
+                                {
+                                    e.id == "Birthday" ? <>
+                                        <h3 className='col-lg-5 col-md-12 col-12'>{e.headTitle}</h3>
+                                        <p className='col-lg-7 col-md-12 col-12'>{e.headDescription}</p>
+                                    </> : ''
+                                }
+
+                            </>
+                        )) : Summer == Flowers ? headData.map((e) => (
+                            <>
+                                {
+                                    e.id == "Flowers" ? <>
+                                        <h3 className='col-lg-5 col-md-12 col-12'>{e.headTitle}</h3>
+                                        <p className='col-lg-7 col-md-12 col-12'>{e.headDescription}</p>
+                                    </> : ''
+                                }
+
+                            </>
+                        )) : Summer == Plants ? headData.map((e) => (
+                            <>
+                                {
+                                    e.id == "Plants" ? <>
+                                        <h3 className='col-lg-5 col-md-12 col-12'>{e.headTitle}</h3>
+                                        <p className='col-lg-7 col-md-12 col-12'>{e.headDescription}</p>
+                                    </> : ''
+                                }
+
+                            </>
+                        )) : Summer == Gift_Baskets ? headData.map((e) => (
+                            <>
+                                {
+                                    e.id == "Gift_Baskets" ? <>
+                                        <h3 className='col-lg-5 col-md-12 col-12'>{e.headTitle}</h3>
+                                        <p className='col-lg-7 col-md-12 col-12'>{e.headDescription}</p>
+                                    </> : ''
+                                }
+
+                            </>
+                        )) : Summer == Sympathy ? headData.map((e) => (
+                            <>
+                                {
+                                    e.id == "Sympathy" ? <>
+                                        <h3 className='col-lg-5 col-md-12 col-12'>{e.headTitle}</h3>
+                                        <p className='col-lg-7 col-md-12 col-12'>{e.headDescription}</p>
+                                    </> : ''
+                                }
+
+                            </>
+                        )) : ''
+                    }
                 </div>
 
                 <div className='d-flex'>
                     <div className='col-3 d-lg-block d-md-none d-sm-none d-none p-2'>
                         <Sidebar />
                     </div>
+
                     <div className='col-lg-9 col-12'>
                         <header className='col-12 d-lg-flex d-md-flex d-sm-flex justify-content-between align-items-center'>
-                            <h5 className=' text-center'>{my.id} Results</h5>
+                            <h5 className=' text-center'>{me} Results</h5>
                             <div className='d-flex align-items-center justify-content-between col-lg-4 col-md-7 col-sm-8'>
                                 <select className='p-1 col-lg-10 col-md-7 col-sm-7 col-7' onChange={(e) => handleChange(e.target.value)}>
                                     <option value={null}>Sort By</option>
@@ -80,7 +152,7 @@ const Summer = () => {
                 </div>
             </div>
 
-
+            {/* ### Offcanvas For Sidebar ### */}
             <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
                     <h2 id="offcanvasRightLabel">Filters</h2>
@@ -90,6 +162,8 @@ const Summer = () => {
                     <Sidebar />
                 </div>
             </div>
+
+            {/* ### Pagenation ### */}
             <div className='col-12 d-flex align-items-lg-center justify-content-center'>
                 <button className=' btn bg-primary text-light m-2' onClick={() => setpage(page - 1)} disabled={page == 1}>Previous</button>
                 <button className=' btn bg-primary text-light m-2' disabled>{page}</button>

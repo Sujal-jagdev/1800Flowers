@@ -4,18 +4,22 @@ import { flowersData } from '../Context'
 
 const Cart = () => {
     const [cartSdata, setcartSdata] = useState([])
-    const { settotalCartProduct } = useContext(flowersData)
-    
+    const { totalCartProduct, settotalCartProduct } = useContext(flowersData)
+    let me = 0;
+
+    // Shoo All Cart Data In Cart Page
     const showData = () => {
         axios.get('http://localhost:8000/Cart/').then((res) => setcartSdata(res.data))
     }
     useEffect(() => {
         showData()
     }, [])
-    if (cartSdata.length > 0) {
-        settotalCartProduct(cartSdata[cartSdata.length - 1])
-    }
 
+    // ### Count Total Cart Products ###
+    cartSdata.map((e, i) => me = i + 1)
+    settotalCartProduct(me)
+
+    // ### Delete Product From Cart
     const delteProduct = (id) => {
         axios.delete(`http://localhost:8000/Cart/${id}`).then((res) => alert('Product Deleted From Cart'))
         showData()

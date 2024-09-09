@@ -136,6 +136,7 @@ const Home = () => {
                         <img src={img6} alt="" className='col-lg-6 col-md-6 col-sm-6 col-12 p-1' style={{ cursor: 'pointer' }} /></Link>
                 </div>
 
+                {/* ###### Slider ###### */}
                 <h2 className=' text-center mt-4'>Trending Flowers & Gifts</h2>
                 <div className='col-12 container-lg d-flex' style={{ overflow: 'scroll', overflowY: 'hidden' }}>
                     {
@@ -162,7 +163,7 @@ const Home = () => {
                         </div>
                         <div className="col-6 col-md-3 p-2">
                             <img src={img10} alt="Description 3" className="img-fluid" />
-                        </div>
+                        </div> 
                         <div className="col-6 col-md-3 p-2">
                             <img src={img11} alt="Description 4" className="img-fluid" />
                         </div>
@@ -185,6 +186,7 @@ const Home = () => {
                             <h4>Beautiful</h4>
                             <p>"I bought these for my Nana’s birthday she said they were amazingly beautiful!"Pamela</p>
                             <p>–Pamela</p>
+
                         </Link>
 
                         <Link to={`${Description}/27`} className=' col-lg-3 col-md-6 col-sm-6 col-12 d-flex align-items-center text-center flex-column p-2 text-decoration-none text-dark' style={{ cursor: 'pointer', borderRight: '1px solid black' }}>
@@ -223,6 +225,7 @@ const Home = () => {
                 <div className='col-12 container-lg'>
                     <img src={img12} className='col-12 ' alt="" />
                 </div>
+                    
             </div>
         </>
     )

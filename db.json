@@ -115,11 +115,39 @@
       "title": "Coastal Breeze™"
     }
   ],
-  "Summer": [
+  "headInfo": [
     {
-      "HeadTitle": "Summer Flower Arrangements, Bouquets & Gifts",
-      "HeadDesc": "It’s the season to celebrate, and we have more ways than ever to send a smile! From colorful summer flower arrangements, bouquets & summer wreaths to blooming summer plants, long stem sunflowers, & fun summer gifts for delivery, trust us to help you celebrate the season!"
+      "id": "Summer",
+      "headTitle": "Summer Flower Arrangements, Bouquets & Gifts",
+      "headDescription": "It’s the season to celebrate, and we have more ways than ever to send a smile! From colorful summer flower arrangements, bouquets & summer wreaths to blooming summer plants, long stem sunflowers, & fun summer gifts for delivery, trust us to help you celebrate the season!"
     },
+    {
+      "id": "Birthday",
+      "headTitle": "Birthday Flower Delivery",
+      "headDescription": "Our birthday flowers include fresh roses, daisies, and more! Whether your happy birthday flower delivery is sent to home or office, you can be sure it will be received with a smile. Need your birthday flowers today? Same-day birthday delivery is available! With same-day flower delivery, no one has to know whether you ordered weeks ago or this morning. You can be sure our flowers for birthdays will send the right message."
+    },
+    {
+      "id": "Flowers",
+      "headTitle": "Flower Arrangements & Floral Delivery",
+      "headDescription": "From birthday parties to anniversary dinners, floral arrangements full of fresh, beautiful flower arrangements are the perfect complement. Whether you choose to send a bright arrangement of yellow sunflowers, vibrant roses, and colorful lilies, or a flower arrangement with delicate pastels, smiles are sure to follow"       
+    },
+    {
+      "id": "Plants",
+      "headTitle": "Plant Gifts",
+      "headDescription": "Send lasting smiles with a plant gift that will grow and flourish. From flowering plants that bloom with beautiful color to succulent plants that bring energy into the home or office, our one-of-a-kind collection is filled with the best plant gifts to send for everyone and every occasion"       
+    },
+    {
+      "id": "Gift_Baskets",
+      "headTitle": "Gift Baskets Delivery",
+      "headDescription": "Treat someone for any occasion with our hand-crafted gift baskets! Whether they crave high-quality gourmet foods, sweet treats, fine wines or fresh fruit, each gift basket delivery is a great way to share smiles with family and friends."       
+    },
+    {
+      "id": "Sympathy",
+      "headTitle": "Sympathy Flowers",
+      "headDescription": "Trust us to help you express your condolences and sympathy, giving comfort and support. We offer sympathy flowers for the service, handcrafted by our caring florists, and sympathy & remembrance gifts for the home."       
+    }
+  ],
+  "Summer": [
     {
       "id": 1,
       "title": "Fields of Europe Summer",
@@ -2446,68 +2474,7 @@
       "category": "Flowers"
     }
   ],
-  "Cart": [
-    {
-      "title": "Floral Embrace",
-      "price": 49.99,
-      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191167xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 1
-    },
-    {
-      "title": "Summer Dunes",
-      "price": 64.99,
-      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/191357xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 2
-    },
-    {
-      "title": "Sorbet Roses",
-      "price": 54.99,
-      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/100550mprsv1cn3x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 4
-    },
-    {
-      "title": "Fiona Flamingo Mini Palm Plant",
-      "price": 39.99,
-      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158111sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 5
-    },
-    {
-      "title": "Fields of Europe Summer",
-      "price": 54.99,
-      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191119xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 6
-    },
-    {
-      "title": "Hello Summer 17 pc Chocolate Box",
-      "price": 59.99,
-      "image": "https://cdn3.simplychocolate.com/wcsstore/SimplyChocolate/images/catalog/179826_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 7
-    },
-    {
-      "title": "By The Seaside Wreath-22”",
-      "price": 49.99,
-      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/182542sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 8
-    },
-    {
-      "title": "Smokehouse Ultimate Bbq Sampler, Set Of 10",
-      "price": 99.99,
-      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/mk022466x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 9
-    },
-    {
-      "title": "Fields of Europe Summer",
-      "price": 54.99,
-      "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191119xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 10
-    },
-    {
-      "title": "Fiona Flamingo Mini Palm Plant",
-      "price": 39.99,
-      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158111sx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 11
-    }
-  ],
+  "Cart": [],
   "RegisterData": [
     {
       "Name": "rahul",
@@ -2542,7 +2509,7 @@
       "id": 4,
       "name": "Product 4",
       "category": "Apparel",
-      "price": 45.00,
+      "price": 45,
       "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/41421SU_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
@@ -2556,14 +2523,14 @@
       "id": 6,
       "name": "Product 6",
       "category": "Baked Goods",
-      "price": 25.00,
+      "price": 25,
       "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/171491L21x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
       "id": 7,
       "name": "Product 7",
       "category": "Cake",
-      "price": 50.00,
+      "price": 50,
       "image": "https://cdn1.simplychocolate.com/wcsstore/SimplyChocolate/images/catalog/163532dx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
@@ -2577,28 +2544,28 @@
       "id": 9,
       "name": "Product 9",
       "category": "Plush Toy",
-      "price": 20.00,
+      "price": 20,
       "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/173061L_22x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
       "id": 10,
       "name": "Product 10",
       "category": "Sweets",
-      "price": 18.50,
+      "price": 18.5,
       "image": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/196345lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
       "id": 11,
       "name": "Product 11",
       "category": "Fresh Fruit",
-      "price": 22.00,
+      "price": 22,
       "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/41126L21x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
       "id": 12,
       "name": "Product 12",
       "category": "Meat",
-      "price": 40.00,
+      "price": 40,
       "image": "https://cdn1.1800baskets.com/wcsstore/Baskets/images/catalog/195331_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
@@ -2612,7 +2579,7 @@
       "id": 14,
       "name": "Product 14",
       "category": "Tote Bag",
-      "price": 30.00,
+      "price": 30,
       "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/162468L_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
@@ -2626,14 +2593,14 @@
       "id": 16,
       "name": "Product 16",
       "category": "Keepsake",
-      "price": 27.50,
+      "price": 27.5,
       "image": "https://cdn2.simplychocolate.com/wcsstore/SimplyChocolate/images/catalog/179826_24x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
       "id": 17,
       "name": "Product 17",
       "category": "Spa",
-      "price": 35.00,
+      "price": 35,
       "image": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/mk033441x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
@@ -2647,14 +2614,14 @@
       "id": 19,
       "name": "Product 19",
       "category": "Home and Kitchenware",
-      "price": 50.00,
+      "price": 50,
       "image": "https://cdn2.1800baskets.com/wcsstore/Baskets/images/catalog/175230_23x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
       "id": 20,
       "name": "Product 20",
       "category": "Chocolate Dipped Strawberry",
-      "price": 33.00,
+      "price": 33,
       "image": "https://cdn2.harryanddavid.com/wcsstore/HarryAndDavid/images/catalog/19_75_30X_03ex.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     },
     {
@@ -2665,4 +2632,4 @@
       "image": "https://cdn2.harryanddavid.com/wcsstore/HarryAndDavid/images/catalog/24_0027192_30JD_23_036x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp"
     }
   ]
-} 
+}

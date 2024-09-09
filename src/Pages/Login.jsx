@@ -1,43 +1,44 @@
 import React, { useContext, useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import GoogleButton from 'react-google-button'
 import { signInWithPopup } from 'firebase/auth'
 import { auth, provider } from '../Services/firebase'
 import { flowersData } from '../Context'
 import axios from 'axios'
 
-const Login = () => {
+  const Login = () => {
+  
   const { isLog, setisLog,setLogSuccess } = useContext(flowersData)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [myEmail, setmyEmail] = useState('')
-  const [mypassword, setmypassword] = useState('')
+  const [mypassword, setmypassword] = useState('')    
 
   const handleLogin = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
-        setisLog(true)
+        setisLog(true);
       })
       .catch((err) => console.log(err))
   }
   axios.get('http://localhost:8000/RegisterData').then((res) => {
     res.data.map((e) => {
       setmyEmail(e.email);
-      setmypassword(e.password)
+      setmypassword(e.password);
     })
   })
   const handleLogin2 = (e) => {
     e.preventDefault()
 
     if (email == '' || password == '') {
-      alert('Must Be Filled Email Password')
+      alert('Must Be Filled Email Password');
     }
     else if (email == myEmail && password == mypassword) {
-      alert('You Are Success Fully Login')
-      setLogSuccess(true)
+      alert('You Are Success Fully Login');
+      setLogSuccess(true);
     }
     else {
-      alert("!!E-mail OR Password Are wrong!!")
+      alert("!!E-mail OR Password Are wrong!!");
     }
   }
   return (
@@ -58,7 +59,9 @@ const Login = () => {
         <hr className='col-6' />
         <GoogleButton onClick={handleLogin} />
         <Link to={'/register'} className='mt-2' >Create An Account</Link>
+
       </form>
+
     </>
   )
 }

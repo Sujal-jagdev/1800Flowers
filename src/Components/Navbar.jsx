@@ -12,13 +12,9 @@ import axios from 'axios';
 
 const Navbar = () => {
   const [provider, setProvider] = useState('')
-  const { setSummer, totalCartProduct, search, setSearch, LogSuccess } = useContext(flowersData);
-  let Summerr = 'http://localhost:8000/Summer';
-  let Birthday = 'http://localhost:8000/Birthday';
-  let Sympathy = 'http://localhost:8000/Sympathy';
-  let Flowers = 'http://localhost:8000/Flowers';
-  let Plants = 'http://localhost:8000/Plants';
-  let Gift_Baskets = 'http://localhost:8000/Gift-Baskets';
+  const { setSummer, totalCartProduct, search, setSearch, LogSuccess, Summerr, Birthday, Flowers, Plants, Gift_Baskets, Sympathy } = useContext(flowersData);
+
+
 
   const [user] = useAuthState(auth);
 
@@ -40,7 +36,7 @@ const Navbar = () => {
           <div className="option d-lg-flex d-md-flex col-lg-3 col-md-4 gap-5 align-items-center pt-3 justify-content-end d-sm-none d-none">
             <Link to={user || LogSuccess ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : <CiUser className='fs-2' />}{user ? user.displayName : LogSuccess ? provider : 'Sign In'}</Link>
             <Link className='d-flex flex-column align-items-center text-decoration-none text-dark'><CiDeliveryTruck className='fs-2' />MyOrders</Link>
-            <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct.id})Cart</Link>
+            <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
           </div>
         </div>
         <hr />
@@ -53,7 +49,7 @@ const Navbar = () => {
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Gift_Baskets)} style={{ cursor: 'pointer' }}>Gift Baskets & Food</h6></Link>
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}>Gifts & More</h6></Link>
           <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Summerr)} style={{ cursor: 'pointer' }}>Sale</h6></Link>
-          <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Birthday)} style={{ cursor: 'pointer' }}> Community</h6></Link>
+          <Link to={'/summer'} className='text-decoration-none text-dark'><h6 onClick={() => setSummer(Sympathy)} style={{ cursor: 'pointer' }}> Community</h6></Link>
         </div>
       </nav>
 
@@ -83,11 +79,11 @@ const Navbar = () => {
             <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Birthday)} className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px', cursor: 'pointer' }}>Birthday <IoIosArrowForward /> </h5></Link>
             <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Sympathy)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Sympathy <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Flowers)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Occasions <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Gift_Baskets)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Occasions <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Birthday)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Flowers <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Flowers)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Flowers <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Summerr)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Plants <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Plants)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Plants <IoIosArrowForward /></h5></Link>
 
           </div>
         </div>

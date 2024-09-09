@@ -12,6 +12,12 @@ export const FlowersProvider = ({ children }) => {
    const [isLog, setisLog] = useState(false)
    const [search, setSearch] = useState('');
    const [LogSuccess, setLogSuccess] = useState(false)
+   let Summerr = 'http://localhost:8000/Summer';
+   let Birthday = 'http://localhost:8000/Birthday';
+   let Sympathy = 'http://localhost:8000/Sympathy';
+   let Flowers = 'http://localhost:8000/Flowers';
+   let Plants = 'http://localhost:8000/Plants';
+   let Gift_Baskets = 'http://localhost:8000/Gift-Baskets';
    
 
     return (
@@ -24,7 +30,7 @@ export const FlowersProvider = ({ children }) => {
             totalCartProduct, settotalCartProduct,
             isLog, setisLog,
             search, setSearch,
-            LogSuccess, setLogSuccess
+            LogSuccess, setLogSuccess,Summerr,Birthday,Flowers,Plants,Gift_Baskets,Sympathy
         }}>
             {children}
         </flowersData.Provider>
