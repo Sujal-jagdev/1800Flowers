@@ -23,13 +23,12 @@ const Navbar = () => {
 
   return (
     <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12 " style={{ backgroundColor: '#fff' }}>
-
       <nav>
         <div className="Nav-1 d-flex col-12 align-items-center justify-content-between ps-lg-5 pe-lg-5 ">
           <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft"><RiMenuSearchLine className='fs-3' /></button>
           <Link to={'/'}><img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/bltce6d6c480577e10e/5d4866eff9ece57fa9a82245/flowers.png?quality=100&auto=webp" alt="" className='mt-1' style={{ height: '60px', width: '110px' }} /></Link>
           <div className="serach col-6 d-flex d-lg-block d-none ps-2">
-            <input type="text" onKeyPress={(e)=>{
+            <input type="text" onKeyPress={(e) => {
               if (e.key === "Enter") {
                 navigate('/summer');
               }
@@ -43,6 +42,7 @@ const Navbar = () => {
             <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
           </div>
         </div>
+            
         <hr />
         <div className="Nav-2 d-lg-flex align-items-center justify-content-between col-12 d-md-none d-sm-none d-none container-lg">
           <Link to={'/summer'} onClick={() => setSummer(Summerr)} className='text-decoration-none text-dark'><h6 >Summer </h6></Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
 
           <div className="Links mt-3">
-  
+
             <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Summerr)}><h5 className='d-flex justify-content-between ms-3 me-3 text-decoration-none text-dark' style={{ height: '40px' }}>Summer<IoIosArrowForward /></h5></Link>
 
             <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Birthday)} className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px', cursor: 'pointer' }}>Birthday <IoIosArrowForward /> </h5></Link>
