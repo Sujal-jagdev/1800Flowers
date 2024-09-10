@@ -129,22 +129,22 @@
     {
       "id": "Flowers",
       "headTitle": "Flower Arrangements & Floral Delivery",
-      "headDescription": "From birthday parties to anniversary dinners, floral arrangements full of fresh, beautiful flower arrangements are the perfect complement. Whether you choose to send a bright arrangement of yellow sunflowers, vibrant roses, and colorful lilies, or a flower arrangement with delicate pastels, smiles are sure to follow"       
+      "headDescription": "From birthday parties to anniversary dinners, floral arrangements full of fresh, beautiful flower arrangements are the perfect complement. Whether you choose to send a bright arrangement of yellow sunflowers, vibrant roses, and colorful lilies, or a flower arrangement with delicate pastels, smiles are sure to follow"
     },
     {
       "id": "Plants",
       "headTitle": "Plant Gifts",
-      "headDescription": "Send lasting smiles with a plant gift that will grow and flourish. From flowering plants that bloom with beautiful color to succulent plants that bring energy into the home or office, our one-of-a-kind collection is filled with the best plant gifts to send for everyone and every occasion"       
+      "headDescription": "Send lasting smiles with a plant gift that will grow and flourish. From flowering plants that bloom with beautiful color to succulent plants that bring energy into the home or office, our one-of-a-kind collection is filled with the best plant gifts to send for everyone and every occasion"
     },
     {
       "id": "Gift_Baskets",
       "headTitle": "Gift Baskets Delivery",
-      "headDescription": "Treat someone for any occasion with our hand-crafted gift baskets! Whether they crave high-quality gourmet foods, sweet treats, fine wines or fresh fruit, each gift basket delivery is a great way to share smiles with family and friends."       
+      "headDescription": "Treat someone for any occasion with our hand-crafted gift baskets! Whether they crave high-quality gourmet foods, sweet treats, fine wines or fresh fruit, each gift basket delivery is a great way to share smiles with family and friends."
     },
     {
       "id": "Sympathy",
       "headTitle": "Sympathy Flowers",
-      "headDescription": "Trust us to help you express your condolences and sympathy, giving comfort and support. We offer sympathy flowers for the service, handcrafted by our caring florists, and sympathy & remembrance gifts for the home."       
+      "headDescription": "Trust us to help you express your condolences and sympathy, giving comfort and support. We offer sympathy flowers for the service, handcrafted by our caring florists, and sympathy & remembrance gifts for the home."
     }
   ],
   "Summer": [
@@ -2474,7 +2474,14 @@
       "category": "Flowers"
     }
   ],
-  "Cart": [],
+  "Cart": [
+    {
+      "title": "With Sympathy Fruit & Sweets Gift Basket",
+      "price": 99.99,
+      "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/149879_23x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "id": 1
+    }
+  ],
   "RegisterData": [
     {
       "Name": "rahul",

@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className="serach col-6 d-flex d-lg-block d-none ps-2">
             <input type="text" onKeyPress={(e)=>{
               if (e.key === "Enter") {
-                
+                navigate('/summer');
               }
             }} onChange={(e) => setSearch(e.target.value)} value={search} style={{ outline: 'none' }} className='col-9 p-2' placeholder='What Are You Looking For?' />
             <Link to={search ? '/summer' : ''} onClick={() => search ? setSummer(Summerr) : ''}><button className='btn text-light' style={{ backgroundColor: '#522C73', height: '45px', marginTop: '-6px' }}>SEARCH</button></Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
 
           <div className="Links mt-3">
-
+  
             <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Summerr)}><h5 className='d-flex justify-content-between ms-3 me-3 text-decoration-none text-dark' style={{ height: '40px' }}>Summer<IoIosArrowForward /></h5></Link>
 
             <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Birthday)} className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px', cursor: 'pointer' }}>Birthday <IoIosArrowForward /> </h5></Link>

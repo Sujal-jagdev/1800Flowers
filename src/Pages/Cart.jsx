@@ -19,6 +19,7 @@ const Cart = () => {
     cartSdata.map((e, i) => me = i + 1)
     settotalCartProduct(me)
 
+
     // ### Delete Product From Cart
     const delteProduct = (id) => {
         axios.delete(`http://localhost:8000/Cart/${id}`).then((res) => alert('Product Deleted From Cart'))
@@ -28,7 +29,7 @@ const Cart = () => {
     return (
         <>
             <div className="main col-12 d-flex flex-wrap container-lg">
-                {
+                {  
                     cartSdata == '' ? <div className=' col-12 text-center'>
                         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-yrKy00koNPRSg-MAE5rkMmy2HiIAE4U_HQ&s' className='col-3 mt-5' />
                     </div> : cartSdata.map((e) => (

@@ -10,9 +10,8 @@ const Summer = () => {
     const [orderDecide, setorderDecide] = useState('');
     const [load, setload] = useState(true);
     const [headData, setheadData] = useState([]);
-    const [totalProduct, settotalProduct] = useState(0)
 
-    // ### Sorting ###
+// ### Sorting ###
     const handleChange = (e) => {
         setSort(e);
         setorderDecide(true);
@@ -21,7 +20,7 @@ const Summer = () => {
 
     let me = 0
 
-    //### Get Data From Api ###
+    // ### Get Data From API Sho Them i Broser Page ###
     const getData = () => {
         axios.get(Summer, {
             params: {
@@ -46,7 +45,7 @@ const Summer = () => {
         getData();
     }, [page, category, pricess, Summer, setSummerData, sort, load, isLog, search]);
 
-    // ### Shoo Total Products In Page
+    // ### Shoo Total Products In Page ###
     summerData.map((e, i) => me = i + 1)
 
     return (
@@ -125,7 +124,7 @@ const Summer = () => {
                     </div>
 
                     <div className='col-lg-9 col-12'>
-                        <header className='col-12 d-lg-flex d-md-flex d-sm-flex justify-content-between align-items-center'>
+                        <header>
                             <h5 className=' text-center'>{me} Results</h5>
                             <div className='d-flex align-items-center justify-content-between col-lg-4 col-md-7 col-sm-8'>
                                 <select className='p-1 col-lg-10 col-md-7 col-sm-7 col-7' onChange={(e) => handleChange(e.target.value)}>
