@@ -4,7 +4,7 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
 import { RiMenuSearchLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { flowersData } from '../Context';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../Services/firebase';
@@ -66,7 +66,7 @@ const Navbar = () => {
         <div class="offcanvas-body">
           <div className="serach col-12 text-end d-flex">
             <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} className='col-9 p-2' placeholder='What Are You Looking For?' />
-
+            
             <Link to={search ? '/summer' : ''} onClick={() => search ? setSummer(Summerr) : ''}> <button className='btn text-light' style={{ backgroundColor: '#522C73', height: '45px' }}>SEARCH</button></Link>
           </div>
 

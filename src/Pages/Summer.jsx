@@ -38,8 +38,6 @@ const Summer = () => {
         }).catch((err) => console.log(err));
     }
 
-
-
     useEffect(() => {
         axios.get('http://localhost:8000/headInfo').then((res) => setheadData(res.data))
         getData();

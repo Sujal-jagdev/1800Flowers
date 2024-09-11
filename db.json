@@ -2480,6 +2480,12 @@
       "price": 99.99,
       "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/149879_23x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
       "id": 1
+    },
+    {
+      "title": "Under the Sea Strawberries",
+      "price": 39.99,
+      "image": "https://cdn4.fruitbouquets.com/wcsstore/Flowers/images/catalog/192783mx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "id": 2
     }
   ],
   "RegisterData": [
