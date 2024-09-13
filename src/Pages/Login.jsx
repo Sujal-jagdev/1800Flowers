@@ -1,18 +1,17 @@
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import GoogleButton from 'react-google-button'
-import { signInWithPopup } from 'firebase/auth'
-import { auth, provider } from '../Services/firebase'
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { auth, auth2, provider } from '../Services/firebase'
 import { flowersData } from '../Context'
 import axios from 'axios'
 
-  const Login = () => {
-  
-  const { isLog, setisLog,setLogSuccess } = useContext(flowersData)
+const Login = () => {
+
+  const { setisLog } = useContext(flowersData)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [myEmail, setmyEmail] = useState('')
-  const [mypassword, setmypassword] = useState('')    
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     signInWithPopup(auth, provider)
@@ -21,26 +20,16 @@ import axios from 'axios'
       })
       .catch((err) => console.log(err))
   }
-  axios.get('http://localhost:8000/RegisterData').then((res) => {
-    res.data.map((e) => {
-      setmyEmail(e.email);
-      setmypassword(e.password);
-    })
-  })
+
   const handleLogin2 = (e) => {
     e.preventDefault()
-
-    if (email == '' || password == '') {
-      alert('Must Be Filled Email Password');
-    }
-    else if (email == myEmail && password == mypassword) {
-      alert('You Are Success Fully Login');
-      setLogSuccess(true);
-    }
-    else {
-      alert("!!E-mail OR Password Are wrong!!");
-    }
+    signInWithEmailAndPassword(auth2, email, password).then((userCredential) => {
+      alert('You Are SucessFully Login')
+      navigate("/");
+      console.log(userCredential.user)
+    }).catch((err) => alert('Email Or Password Are wrong'))
   }
+
   return (
     <>
       <form className='col-12 d-flex flex-column align-items-center mt-4'>

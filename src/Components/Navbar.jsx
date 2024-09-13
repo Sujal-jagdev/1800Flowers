@@ -7,20 +7,17 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link, useNavigate } from 'react-router-dom';
 import { flowersData } from '../Context';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../Services/firebase';
+import { auth, auth2 } from '../Services/firebase';
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
-  const [provider, setProvider] = useState('')
   const { setSummer, totalCartProduct, search, setSearch, LogSuccess, Summerr, Birthday, Flowers, Plants, Gift_Baskets, Sympathy } = useContext(flowersData);
 
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
-  axios.get('http://localhost:8000/RegisterData').then((res) => {
-    res.data.map((e) => setProvider(e.Name));
-  });
+  console.log(auth2.accessToken)
 
   const handleDelete = () => {
     signOut(auth).then((res) => alert('Sign-out successful')).catch((err) => console.log(err))
@@ -44,7 +41,7 @@ const Navbar = () => {
           <div className="option d-lg-flex d-md-flex col-lg-3 col-md-4 gap-5 align-items-center pt-3 justify-content-end d-sm-none d-none">
 
             {/* Sign In Button */}
-            <Link to={user || LogSuccess ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : <CiUser className='fs-2' />}{user ? user.displayName : LogSuccess ? provider : 'Sign In'}</Link>
+            <Link to={user || auth2.user ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : auth2.user ? 'ok' : <CiUser className='fs-2' />}{user ? user.displayName : 'Sign In'}</Link>
 
             {/* Cart Button */}
             <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
