@@ -9,6 +9,7 @@ import { flowersData } from '../Context';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../Services/firebase';
 import axios from 'axios';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
   const [provider, setProvider] = useState('')
@@ -20,6 +21,10 @@ const Navbar = () => {
   axios.get('http://localhost:8000/RegisterData').then((res) => {
     res.data.map((e) => setProvider(e.Name));
   });
+
+  const handleDelete = () => {
+    signOut(auth).then((res) => alert('Sign-out successful')).catch((err) => console.log(err))
+  }
 
   return (
     <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12 " style={{ backgroundColor: '#fff' }}>
@@ -37,12 +42,18 @@ const Navbar = () => {
           </div>
 
           <div className="option d-lg-flex d-md-flex col-lg-3 col-md-4 gap-5 align-items-center pt-3 justify-content-end d-sm-none d-none">
+
+            {/* Sign In Button */}
             <Link to={user || LogSuccess ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : <CiUser className='fs-2' />}{user ? user.displayName : LogSuccess ? provider : 'Sign In'}</Link>
-            <Link className='d-flex flex-column align-items-center text-decoration-none text-dark'><CiDeliveryTruck className='fs-2' />MyOrders</Link>
+
+            {/* Cart Button */}
             <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
+
+            {/* Logout Button */}
+            <Link className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
           </div>
         </div>
-            
+
         <hr />
         <div className="Nav-2 d-lg-flex align-items-center justify-content-between col-12 d-md-none d-sm-none d-none container-lg">
           <Link to={'/summer'} onClick={() => setSummer(Summerr)} className='text-decoration-none text-dark'><h6 >Summer </h6></Link>
@@ -66,14 +77,20 @@ const Navbar = () => {
         <div class="offcanvas-body">
           <div className="serach col-12 text-end d-flex">
             <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} className='col-9 p-2' placeholder='What Are You Looking For?' />
-            
+
             <Link to={search ? '/summer' : ''} onClick={() => search ? setSummer(Summerr) : ''}> <button className='btn text-light' style={{ backgroundColor: '#522C73', height: '45px' }}>SEARCH</button></Link>
           </div>
 
           <div className="option d-flex gap-5 align-items-center pt-3 col-12 justify-content-center">
+
             <Link to={user ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : <CiUser className='fs-2' />}{user ? user.displayName : 'SignIn'}</Link>
-            <Link className='d-flex flex-column align-items-center text-decoration-none text-dark'><CiDeliveryTruck className='fs-2' />MyOrders</Link>
-            <Link className='d-flex flex-column align-items-center text-decoration-none text-dark' to={'/cart'}><BsCart2 className='fs-2' />(0)Cart</Link>
+
+            {/* Cart Button */}
+            <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
+
+            {/* Logout Button */}
+            <Link className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
+
           </div>
 
           <div className="Links mt-3">
