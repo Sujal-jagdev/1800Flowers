@@ -87,40 +87,41 @@ const Navbar = () => {
           <div className="serach col-12 text-end d-flex">
             <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} className='col-9 p-2' placeholder='What Are You Looking For?' />
 
-            <Link to={search ? '/summer' : ''} onClick={() => search ? setSummer(Summerr) : ''}> <button className='btn text-light' style={{ backgroundColor: '#522C73', height: '45px' }}>SEARCH</button></Link>
+            <Link to={search ? '/summer' : ''} onClick={() => search ? setSummer(Summerr) : ''}> <button className='btn text-light' style={{ backgroundColor: '#522C73', height: '45px' }} data-bs-dismiss="offcanvas" aria-label="Close">SEARCH</button></Link>
           </div>
 
           <div className="option d-flex gap-5 align-items-center pt-3 col-12 justify-content-center">
 
             {/* Sign In Button */}
-            <Link to={user || user2 ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : user2 ? '' : <CiUser className='fs-2' />}{user ? user.displayName : user2 ? '' : 'Sign In'}</Link>
+            <Link data-bs-dismiss="offcanvas" aria-label="Close" to={user || user2 ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : user2 ? '' : <CiUser className='fs-2' />}{user ? user.displayName : user2 ? '' : 'Sign In'}</Link>
 
             {/* Cart Button */}
-            <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
+            <Link data-bs-dismiss="offcanvas" aria-label="Close" to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
 
             {/* Logout Button */}
-            <Link className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user || user2 ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
+            <Link data-bs-dismiss="offcanvas" aria-label="Close" className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user || user2 ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
 
           </div>
 
           <div className="Links mt-3">
 
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Summerr)}><h5 className='d-flex justify-content-between ms-3 me-3 text-decoration-none text-dark' style={{ height: '40px' }}>Summer<IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark' onClick={() => setSummer(Summerr)}><h5 className='d-flex justify-content-between ms-3 me-3 text-decoration-none text-dark' style={{ height: '40px' }}>Summer<IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Birthday)} className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px', cursor: 'pointer' }}>Birthday <IoIosArrowForward /> </h5></Link>
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Sympathy)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Sympathy <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Birthday)} className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px', cursor: 'pointer' }}>Birthday <IoIosArrowForward /> </h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Gift_Baskets)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Occasions <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark' onClick={() => setSummer(Sympathy)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Sympathy <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Flowers)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Flowers <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark' onClick={() => setSummer(Gift_Baskets)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Occasions <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Plants)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Plants <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark' onClick={() => setSummer(Flowers)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Flowers <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Gift_Baskets)} className='d-flex justify-content-between ms-3 me-3' >Gift Baskets & Food <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark' onClick={() => setSummer(Plants)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Plants <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Summerr)} className='d-flex justify-content-between m-3 ms-3 me-3'>Sale <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Gift_Baskets)} className='d-flex justify-content-between ms-3 me-3' >Gift Baskets & Food <IoIosArrowForward /></h5></Link>
 
-            <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Sympathy)} className='d-flex justify-content-between ms-3 me-3'> Community <IoIosArrowForward /></h5></Link>
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Summerr)} className='d-flex justify-content-between m-3 ms-3 me-3'>Sale <IoIosArrowForward /></h5></Link>
+
+            <Link to={'/summer'} data-bs-dismiss="offcanvas" aria-label="Close" className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Sympathy)} className='d-flex justify-content-between ms-3 me-3'> Community <IoIosArrowForward /></h5></Link>
           </div>
         </div>
       </div>
