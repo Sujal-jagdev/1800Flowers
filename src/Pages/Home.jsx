@@ -18,12 +18,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    const { setSummer } = useContext(flowersData)
-    let Summerr = 'http://localhost:8000/Summer'
-    let Birthday = 'http://localhost:8000/Birthday'
-    let Sympathy = 'http://localhost:8000/Sympathy'
-    let Flowers = 'http://localhost:8000/Flowers'
-    let Plants = 'http://localhost:8000/Plants'
+    const { setSummerm,Summerr, Birthday, Flowers, Sympathy, } = useContext(flowersData)
     let Description = 'http://localhost:5173/description'
 
     const [FlowersList1, setFlowersList1] = useState([])
@@ -32,10 +27,10 @@ const Home = () => {
     const [FlowersList4, setFlowersList4] = useState([])
 
     let FlowersListAPI = {
-        API1: 'http://localhost:8000/FlowersList1',
-        API2: 'http://localhost:8000/FlowersList2',
-        API3: 'http://localhost:8000/FlowersList3',
-        API4: 'http://localhost:8000/FlowersList4',
+        API1: 'https://flowers1800-db-2.onrender.com/FlowersList1',
+        API2: 'https://flowers1800-db-2.onrender.com/FlowersList2',
+        API3: 'https://flowers1800-db-2.onrender.com/FlowersList2',
+        API4: 'https://flowers1800-db-2.onrender.com/FlowersList2',
     }
 
     useEffect(() => {

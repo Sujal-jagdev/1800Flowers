@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { CiUser } from "react-icons/ci";
-import { CiDeliveryTruck } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
 import { RiMenuSearchLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
@@ -8,7 +7,6 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { flowersData } from '../Context';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, auth2 } from '../Services/firebase';
-import axios from 'axios';
 import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
@@ -31,7 +29,7 @@ const Navbar = () => {
 
   useEffect(() => {
     showData()
-  }, [])
+  }, [cartSdata])
 
   // ### Count Total Cart Products ###
   cartSdata.map((e, i) => me = i + 1)

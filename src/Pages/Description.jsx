@@ -10,7 +10,7 @@ const Description = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        axios.get('http://localhost:8000/Flowers').then((res) => setFlowersList4(res.data))
+        axios.get('https://flowers1800-db-2.onrender.com/Flowers').then((res) => setFlowersList4(res.data))
         axios.get(`${Summer}/${id}`).then((res) => setgetData(res.data)).catch((err) => console.log(err))
     }, [id])
 
@@ -20,7 +20,7 @@ const Description = () => {
             price: getData.price,
             image: getData.image
         };
-        axios.post(`http://localhost:8000/Cart/`, productData).then((res) => alert('Product Added To Cart')).catch((err) => console.log(err))
+        axios.post(`https://flowers1800-db-2.onrender.com/Cart`, productData).then((res) => alert('Product Added To Cart')).catch((err) => console.log(err))
     }
     return (
         <>

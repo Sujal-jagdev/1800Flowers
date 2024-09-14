@@ -8,11 +8,11 @@ const Cart = () => {
 
     // ### Delete Product From Cart
     const delteProduct = (id) => {
-        axios.delete(`http://localhost:8000/Cart/${id}`).then((res) => alert('Product Deleted From Cart'))
+        axios.delete(`https://flowers1800-db-2.onrender.com/Cart/${id}`).then((res) => alert('Product Deleted From Cart'))
         showData()
     }
 
-    return (
+    return (    
         <>
             <div className="main col-12 d-flex flex-wrap container-lg">
                 {

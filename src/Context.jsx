@@ -15,14 +15,14 @@ export const FlowersProvider = ({ children }) => {
     const [LogSuccess, setLogSuccess] = useState(false)
     const [cartSdata, setcartSdata] = useState([])
     const showData = () => {
-        axios.get('http://localhost:8000/Cart/').then((res) => setcartSdata(res.data))
+        axios.get('https://flowers1800-db-2.onrender.com/Cart').then((res) => setcartSdata(res.data))
     }
-    let Summerr = 'http://localhost:8000/Summer';
-    let Birthday = 'http://localhost:8000/Birthday';
-    let Sympathy = 'http://localhost:8000/Sympathy';
-    let Flowers = 'http://localhost:8000/Flowers';
-    let Plants = 'http://localhost:8000/Plants';
-    let Gift_Baskets = 'http://localhost:8000/Gift-Baskets';
+    let Summerr = 'https://flowers1800-db-2.onrender.com/Summer';
+    let Birthday = 'https://flowers1800-db-2.onrender.com/Birthday';
+    let Sympathy = 'https://flowers1800-db-2.onrender.com/Sympathy';
+    let Flowers = 'https://flowers1800-db-2.onrender.com/Flowers';
+    let Plants = 'https://flowers1800-db-2.onrender.com/Plants';
+    let Gift_Baskets = 'https://flowers1800-db-2.onrender.com/Gift-Baskets';
 
 
     return (

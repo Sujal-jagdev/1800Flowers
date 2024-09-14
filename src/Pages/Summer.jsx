@@ -39,7 +39,7 @@ const Summer = () => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:8000/headInfo').then((res) => setheadData(res.data))
+        axios.get('https://flowers1800-db-2.onrender.com/headInfo').then((res) => setheadData(res.data))
         getData();
     }, [page, category, pricess, Summer, setSummerData, sort, load, isLog, search]);
 

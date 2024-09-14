@@ -2480,6 +2480,12 @@
       "price": 39.99,
       "image": "https://cdn1.1800flowers.com/wcsstore/PersonalizationMall/images/catalog/48607-130649-240503105219x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
       "id": 2
+    },
+    {
+      "title": "Summer Dunes",
+      "price": 64.99,
+      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/191357xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
+      "id": 3
     }
   ],
   "Gift-Baskets": [
