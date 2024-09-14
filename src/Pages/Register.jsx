@@ -24,7 +24,6 @@ const Register = () => {
       navigate("/");
       console.log(userCredential)
     }).catch((err) => alert('User Already Exist'))
-
   }
   return (
     <>

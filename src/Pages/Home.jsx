@@ -18,7 +18,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    const { setSummer, totalCartProduct } = useContext(flowersData)
+    const { setSummer } = useContext(flowersData)
     let Summerr = 'http://localhost:8000/Summer'
     let Birthday = 'http://localhost:8000/Birthday'
     let Sympathy = 'http://localhost:8000/Sympathy'
@@ -79,7 +79,7 @@ const Home = () => {
                         <div className='col-lg-3 col-md-3 col-sm-3 col-5'>
                             <img className='col-12' src={logo2} alt="" />
                         </div>
-                        <p className='col-lg-3 text-center mt-2 col-md-6 col-sm-12 col-12'>We’re sorry to interrupt this daydream, but these limited-edition (and oh-so-dreamy) pieces won’t be here for long.</p>
+                        <p className='col-lg-3 text-center mt-lg-2 col-md-6 col-sm-12 col-12'>We’re sorry to interrupt this daydream, but these limited-edition (and oh-so-dreamy) pieces won’t be here for long.</p>
                         <Link to={'/summer'}><button onClick={() => setSummer(Birthday)} className=' btn bg-light text-dark fw-bold'>Shop The Collection</button></Link>
                     </div>
                 </div>
@@ -114,21 +114,6 @@ const Home = () => {
                     <Link to={'/summer'} onClick={() => setSummer(Sympathy)}><img src={img4} alt="" className='col-12 p-1' style={{ cursor: 'pointer' }} /></Link>
                 </div>
 
-                <section className=' container-lg'>
-                    <h2 className='col-12 text-center mt-5'>Explore Our Gifts & More</h2>
-                    <div className="col-12 d-flex" style={{ flexWrap: 'wrap', cursor: 'pointer' }}>
-                        {
-                            FlowersList3.map((e) => (
-                                <>
-                                    <Link to={'/summer'} onClick={() => setSummer(Plants)} className='col-lg-2 p-1 col-md-4 col-sm-6 col-4 text-decoration-none text-dark'>
-                                        <img src={e.image} alt="" className='col-12' />
-                                        <p>{e.title}</p>
-                                    </Link>
-                                </>
-                            ))
-                        }
-                    </div>
-                </section>
 
                 <div className='col-12 container-lg mt-3' >
                     <Link to={'/summer'} onClick={() => setSummer(Birthday)}>

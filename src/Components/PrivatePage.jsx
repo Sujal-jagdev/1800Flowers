@@ -1,15 +1,13 @@
 import React, { useContext } from 'react'
 import { Navigate } from 'react-router-dom';
-import { flowersData } from '../Context';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../Services/firebase';
+import { auth, auth2 } from '../Services/firebase';
 
 const PrivatePage = ({ children }) => {
-    const { LogSuccess } = useContext(flowersData)
+    const [user2] = useAuthState(auth2)
     const [user] = useAuthState(auth);
-    if (user || LogSuccess) {
+    if (user || user2) {
         return children
-
     }
     else {
         alert("After Login You Can Access All Features And Pages")

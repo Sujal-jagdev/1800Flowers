@@ -17,6 +17,7 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
         setisLog(true);
+        navigate('/')
       })
       .catch((err) => console.log(err))
   }
@@ -26,8 +27,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth2, email, password).then((userCredential) => {
       alert('You Are SucessFully Login')
       navigate("/");
-      console.log(userCredential.user)
-    }).catch((err) => alert('Email Or Password Are wrong'))
+    }).catch((err) => alert('Email Or Password Are Wrong'))
   }
 
   return (
@@ -48,7 +48,6 @@ const Login = () => {
         <hr className='col-6' />
         <GoogleButton onClick={handleLogin} />
         <Link to={'/register'} className='mt-2' >Create An Account</Link>
-
       </form>
 
     </>

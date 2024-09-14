@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CiUser } from "react-icons/ci";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
@@ -12,16 +12,30 @@ import axios from 'axios';
 import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
-  const { setSummer, totalCartProduct, search, setSearch, LogSuccess, Summerr, Birthday, Flowers, Plants, Gift_Baskets, Sympathy } = useContext(flowersData);
+  const { setSummer, totalCartProduct, search, setSearch, Summerr, Birthday, Flowers, Plants, Gift_Baskets, Sympathy, cartSdata, settotalCartProduct, showData} = useContext(flowersData);
 
   const [user] = useAuthState(auth);
+  const [user2] = useAuthState(auth2)
   const navigate = useNavigate();
+  let me = 0;
 
-  console.log(auth2.accessToken)
-
+  // LogOut User
   const handleDelete = () => {
-    signOut(auth).then((res) => alert('Sign-out successful')).catch((err) => console.log(err))
+    // Logout User In Google Auth
+    signOut(auth).then((res) => alert('Log-out successful')).catch((err) => console.log(err))
+
+    // Logiut User In Email Password
+    signOut(auth2).then((res) => alert('Log-out successful')).catch((err) => alert('Email Or Password Are Wrong!!'))
+    navigate('/login')
   }
+
+  useEffect(() => {
+    showData()
+  }, [])
+
+  // ### Count Total Cart Products ###
+  cartSdata.map((e, i) => me = i + 1)
+  settotalCartProduct(me)
 
   return (
     <div className="ps-lg-5 pe-lg-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5 col-12 " style={{ backgroundColor: '#fff' }}>
@@ -41,13 +55,13 @@ const Navbar = () => {
           <div className="option d-lg-flex d-md-flex col-lg-3 col-md-4 gap-5 align-items-center pt-3 justify-content-end d-sm-none d-none">
 
             {/* Sign In Button */}
-            <Link to={user || auth2.user ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : auth2.user ? 'ok' : <CiUser className='fs-2' />}{user ? user.displayName : 'Sign In'}</Link>
+            <Link to={user || user2 ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : user2 ? '' : <CiUser className='fs-2' />}{user ? user.displayName : user2 ? '' : 'Sign In'}</Link>
 
             {/* Cart Button */}
             <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
 
             {/* Logout Button */}
-            <Link className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
+            <Link className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user || user2 ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
           </div>
         </div>
 
@@ -80,13 +94,14 @@ const Navbar = () => {
 
           <div className="option d-flex gap-5 align-items-center pt-3 col-12 justify-content-center">
 
-            <Link to={user ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : <CiUser className='fs-2' />}{user ? user.displayName : 'SignIn'}</Link>
+            {/* Sign In Button */}
+            <Link to={user || user2 ? '' : '/login'} className='d-flex flex-column align-items-center text-decoration-none text-dark'>{user ? <img src={user.photoURL} className='col-6' style={{ borderRadius: '50px' }} /> : user2 ? '' : <CiUser className='fs-2' />}{user ? user.displayName : user2 ? '' : 'Sign In'}</Link>
 
             {/* Cart Button */}
             <Link to={'/cart'} className='d-flex flex-column align-items-center text-decoration-none text-dark'><BsCart2 className='fs-2' />({totalCartProduct})Cart</Link>
 
             {/* Logout Button */}
-            <Link className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
+            <Link className='d-flex flex-column align-items-center text-decoration-none text-light bg-danger'>{user || user2 ? <button className=' btn text-light' onClick={handleDelete}>Logout</button> : ''}</Link>
 
           </div>
 
@@ -102,6 +117,12 @@ const Navbar = () => {
             <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Flowers)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Flowers <IoIosArrowForward /></h5></Link>
 
             <Link to={'/summer'} className='text-decoration-none text-dark' onClick={() => setSummer(Plants)}><h5 className='d-flex justify-content-between ms-3 me-3' style={{ height: '40px' }}>Plants <IoIosArrowForward /></h5></Link>
+
+            <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Gift_Baskets)} className='d-flex justify-content-between ms-3 me-3' >Gift Baskets & Food <IoIosArrowForward /></h5></Link>
+
+            <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Summerr)} className='d-flex justify-content-between m-3 ms-3 me-3'>Sale <IoIosArrowForward /></h5></Link>
+
+            <Link to={'/summer'} className='text-decoration-none text-dark'><h5 onClick={() => setSummer(Sympathy)} className='d-flex justify-content-between ms-3 me-3'> Community <IoIosArrowForward /></h5></Link>
           </div>
         </div>
       </div>

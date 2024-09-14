@@ -2476,24 +2476,10 @@
   ],
   "Cart": [
     {
-      "title": "With Sympathy Fruit & Sweets Gift Basket",
-      "price": 99.99,
-      "image": "https://cdn3.1800baskets.com/wcsstore/Baskets/images/catalog/149879_23x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
-      "id": 1
-    },
-    {
       "title": "Carhartt Embroidered 36 Can Cooler",
       "price": 39.99,
       "image": "https://cdn1.1800flowers.com/wcsstore/PersonalizationMall/images/catalog/48607-130649-240503105219x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&auto=webp",
       "id": 2
-    }
-  ],
-  "RegisterData": [
-    {
-      "Name": "rahul",
-      "email": "a@gmail.com",
-      "password": "12345",
-      "id": 1
     }
   ],
   "Gift-Baskets": [
