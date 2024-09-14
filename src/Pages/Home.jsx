@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
     const { setSummerm,Summerr, Birthday, Flowers, Sympathy, } = useContext(flowersData)
-    let Description = 'https://1800flowers.netlify.app/description/1'
+    let Description = 'https://1800flowers.netlify.app/description/'
 
     const [FlowersList1, setFlowersList1] = useState([])
     const [FlowersList2, setFlowersList2] = useState([])
